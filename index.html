@@ -1,0 +1,253 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/General.css" />
+</head>
+<body>
+    <!-- This may not be necessary -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Hatchery Information System</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Pages/Models.html">Model Overview</a>
+                        <a class="nav-link" href="Pages/RUBOModel.html">Rearing Unit Business Object</a>
+                        <a class="nav-link" href="Pages/FBOModel.html">Fish Business Object</a>
+                        <a class="nav-link" href="Pages/Models.html">Growth Core</a>
+                        <a class="nav-link" href="Pages/Models.html">Semi DAL</a>
+                        <a class="nav-link" href="Pages/CommunicationModel.html">Communication</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Philosophy
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Pages/Rationale.html">Rationale</a>
+                        <a class="nav-link" href="Pages/The Future Direction.html">Future Direction</a>
+                        <a class="nav-link" href="Pages/NumberFlow.html">Managing Numbers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plugins
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Pages/PluginOverview.html">Plugin Overview</a>
+                        <a class="nav-link" href="Pages/IHISGeneral.html">IHISGeneral</a>
+                        <a class="nav-link" href="Pages/IMWVSupplemental.html">IMWVSupplemental</a>
+                        <a class="nav-link" href="Pages/IShapeFactory.html">IShapeFactory</a>
+                        <a class="nav-link" href="Pages/IMetric.html">IMetric</a>
+                        <a class="nav-link" href="Pages/IColorControl.html">IColorControl</a>
+                        <a class="nav-link" href="Pages/IAPI.html">IInternalAPI</a>
+                        <a class="nav-link" href="Pages/ISilentPartner.html">ISilentPartner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Pages/AboutPage.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container-fluid mainText">
+        <h1>Overview</h1>
+        <div>
+            <p>
+                This site discusses a program for managing hatchery information, which was written as a hobby over several years by somebody who spent a few decades immersed in the subject. The primary focus is on research and conservation hatcheries, though the program is designed to be sufficiently flexible to work for those and any other hatchery or hatchery like data structure where animals live in a variety of rearing spaces.
+            </p>
+        </div>
+
+        <br />
+        <h2>The Current State</h2>
+        <div>
+            <p>
+                While the program is working and met all of my objectives for design, I am deeply ambivalent about databases designed for managing hatchery data long term. Such projects are inevitably going to be large, and tend to be quite costly to create and maintain. While the benefits for managing, exposing, and maintaining data records are intuitively clear to most everybody, it is debatable whether or not the benefits justify the costs. I wrote this program as a hobby, and despite it being a lot of fun, along with meeting all of my objectives, I’m still not sure whether this, or any other hatchery data management program, is worth writing in earnest. However, if it is possible to write a program that can underpin a wide range of needs, then it is likely reasonable, and that is the core objective of this project.
+            </p>
+        </div>
+        <div>
+            <p>
+                While working on this hobby, I learned quite a few things that would be useful to any agency that is setting out to write a hatchery data management program. I have not made the program, or the source code, publicly available at this time, because I don’t want anybody to think this program is a totally finished product. In fact, since all the UI and much of the functionality comes from plugins, the program can never be truly finished, nor should it be. Somebody will always have other plugins that could meet new needs or take the program in different directions. With hatcheries, and hatchery data, one must be permanently flexible, and that’s what this program offers. The program, source code, and a few thousand pages of documentation (most of which is in desperate need of curation) are available by contacting me. What I’m looking for is any person or group who knows what they are getting into, yet still believes it is the right thing to do.
+            </p>
+        </div>
+        <br />
+        <h2>Initial Principles</h2>
+        <div>
+            <p>
+                The original principle that started this program was the idea that whatever the hatchery personnel did on the concrete they should be able to do on the screen, graphically. The reason for this is two-fold. First, I had noticed that learning actions and retaining how to perform actions were a significant problem with hatchery data management programs. This is due to there being several possible data items that could be entered, along with some data being collected daily (e.g. mortality, feed, etc.), other data collected monthly (e.g. weight, length), and a bit collected yearly (release, transfers), which means that there is ample time between repetition of some actions for a person to forget the process. Since humans are visually oriented, in general, a graphical interface that is clear and consistent, makes it easier to learn and retain data entry processes.
+            </p>
+
+            <p>
+                The second reason for making a graphical interface has to do with an observation about hatchery data. The vast majority of the data that can be collected for a hatchery consists of nothing more than a number. Whether it is amount of feed, number of mortality, average weight of fish, and many other things, the actual data recorded is a single number. The difficulty is not in the number itself, but in choosing where to enter the number. In programs, there are a few standard approaches to allow a user to select an item from a set of items. These approaches include things like list boxes, drop down boxes, and grids. Each approach has some advantages, but all three of those become slow and awkward to use when the number of items exceeds around a dozen, or so, items. Scrolling through lists is not much fun for anybody. For that reason, various solutions have been tried to facilitate choosing an item from a list, such as sorted lists, search boxes, and auto complete boxes. These approaches work poorly in the case of fish hatcheries. In some fish hatcheries, the number of rearing units could be in the hundreds, and the names will all be very similar. For example, Raceway 11W differs from Raceway 1W by only a single digit well to the right.  A sorted list doesn’t help much, nor does something like auto complete, due to the similarity of the names. Finding one rearing unit out of a list of a hundred or more, will be both tedious and error prone. By showing the rearing units on the screen in roughly the way they appear at the facility, makes selection vastly easier. Since the actual data is often just a single number, selecting the location becomes a significant part of entering hatchery data. Speeding up selection speeds up all data entry.
+            </p>
+
+            <br />
+
+            <h2 id="CurrentView">Current Time View</h2>
+            <h3>
+                To facilitate graphical selection and interaction, the Current Time View data entry interface looks like this:
+            </h3>
+            <img src="Images/AnnotatedMain.png">
+            <br />
+            <br />
+            <p>
+                The main screen area consists of various types of rearing units arranged into groups as they would be arranged in the hatchery. While the display shows horizontal rows of rearing units, there is no requirement that they be arranged like this. The screen also shows a few different types of rearing units, such as Heath stacks at the top, rectangular raceways below them, fish marking trailers, and a pair of ponds that can be divided into quadrants, and more raceways below them. It is possible to drag the screen around to navigate, as well as zooming in and out.
+            </p>
+            <p>
+                The side stall icons, bottom stall icons, button bar items, and menu items, are all functionality for interacting with the fish or the rearing units displayed on the screen.
+            </p>
+            <p>
+                Side stall icons can be dragged and dropped onto raceways. These can be used for things like weighing fish, splitting raceways, feeding fish, and so forth. If the user takes something to a group of fish, then a side stall icon would be appropriate. Another use would be adding new fish into the system, such as a transfer from a different facility. The key is that the user indicates which raring unit or group of fish they want to apply the action to by dropping the icon on the appropriate rearing unit.
+            </p>
+            <p>
+                Bottom stall icons can have fish dragged and dropped onto them. These can be used for recording mortality, releasing fish, transferring fish to other facilities, and so forth. Any action that removes fish from the system would be appropriate as a bottom stall icon.
+            </p>
+            <p>
+                Button bar elements are for those operations that make sense for the whole hatchery, or for a selection of multiple rearing units or groups of fish. These might include reports and summaries, but several of the button bar elements shown are similar to side stall icons. The reason for this is that, while it is quite easy to drag and drop an icon to perform an action, that becomes tedious if it has to be done repeatedly, such as entering mortality for every rearing unit in the facility. Therefore, it is also possible to select multiple individual rearing units, or a whole group of rearing units, in which case clicking a button bar element will allow it to work with the selected rearing units oar groups of fish. This allows for fast, intuitive, graphical selection, along with a faster interface than repeatedly dragging an icon to different rearing units. Therefore, several actions have both side stall icons for easy learning and low repetition, and button bar icons for faster data entry.
+            </p>
+            <p>
+                Finally, the menu items are for operations that do not necessarily deal with the hatchery, but instead are for controlling the program, along with any action that has no visual interface.
+            </p>
+            <h3>
+                A closeup of some raceways shows more functionality:
+            </h3>
+            <img src="Images/TwoRacewayOneSplit.png" />
+            <br />
+            <br />
+            <p>
+                Each rearing unit may or may not have fish, and need not even have water (all rearing units shown do have water, as there is a different graphic for an empty rearing unit). Some rearing units can be divided by adding a divider screen, also called a splitter. This is done by dragging the side stall splitter screen and dropping it on a rearing unit, or else dragging an existing splitter and dropping it either elsewhere in the same rearing unit, or on another rearing unit. Much like a physical divider screen, once a screen is in a rearing unit, it can be moved around or between rearing units. Even better, these graphical divider screens can’t transmit disease between rearing units.
+            </p>
+            <p>
+                Not all rearing units can be split, while others can only be split at keyways. Dropping a splitter onto a rearing unit that can’t be divided does nothing. What happens when a splitter is dropped on a rearing unit that can only be divided at a keyway is up to the rearing unit, though generally the splitter will snap to the nearest keyway.
+            </p>
+            <p>
+                Within the rearing unit, there are eight RWPB stalls, which are icons that give information about the fish in the rearing unit, or about the rearing unit itself. These can be used for informational things, such as genetic information about the fish, size and growth, and so forth. They can also be used to enter or alter data for the rearing unit much like a side stall, though this is somewhat discouraged, since there are only eight of them that can be displayed at any one time.
+            </p>
+            <p>
+                Sometimes, there is not sufficient space within a rearing unit to display the RWPB icons. This is often due to either the zoom level of the display or the size and shape of the rearing unit being such that there isn’t sufficient space. When there isn’t sufficient space, the RWPB stalls are replaced by the blue gear icon. If the mouse lingers over that icon, a floating window will pop up with the RWPB stalls for that rearing unit. This allows rearing units to be quite small while still retaining full functionality, as well as allowing for awkward shapes, such as a circular tank divided into six wedges.
+            </p>
+            <br />
+            <h2>What Are Those Icons</h2>
+            <p>
+                So, there  are icons on the sides, icons on the bottom, icons in the rearing units, and icons on the button bar, but what are those icons? With only two exceptions, they are all plugins. All the side stall icons (except for the divider screen), button bar icons (aside from one), bottom stall icons, RWPB icons, most of the menu items, and even the rearing units themselves, are dynamically loaded content. This was the second key design decision: Almost nothing is forced on the user. Every installation could have different functionality, even at the same facility. Furthermore, the functionality of the program can be increased or reduced by simply adding or removing files from a folder.
+            </p>
+            <p>
+                The main program acts as a host for the underlying models and a host for the plugins that interact with the models. If a person comes up with a different way to record mortality, they can create a new plugin that can either work with the existing plugins, work with part of the existing plugins, or replace it entirely. If they want to hook up an automated flow gauge and have the program record flow to the database, they can write a plugin for that. If they have sinusoidal rearing units that can only be divided in certain places, they can create a plugin for that. They can decide whether the plugin should act as a side stall (and can be dragged to a rearing unit), a bottom stall (fish can be dragged to the icon), an RWPB (information about a rearing unit, or even data entry for a specific rearing unit), a button bar button (information about the whole hatchery, or the currently selected set of rearing units), or a menu item (non-interface items, configuration items, and so forth).
+            </p>
+            <br />
+
+            <h2 id="MoveWebView">The Move Web View</h2>
+            <p>
+                Once the Current Time View was working as I wanted it, I realized that it had some drawbacks. For one thing, it really only showed the state of the hatchery at a single point in time. It was possible to add plugins that changed the time that was shown, but that didn’t really help all that much. Seeing the hatchery at any single point in time didn’t show the progress of change over time. Therefore, a second view of the data was added, which is the Move Web View. Move webs are the underlying data structure of hatcheries. The Move Web shows how fish move from place to place through the hatchery. The main purpose of the <a href="Pages/FBOModel.html">Fish Business Object</a> model is to manage the move webs in a hatchery. Move webs prove to be an excellent model for managing hatchery data, and are even better if they can be viewed as a whole, which is the purpose of the Move Web View.
+            </p>
+            <h3>The move web view shows all the Move Webs for the hatchery in the database.</h3>
+
+            <img src="Images/MWVFullScreen.png" />
+            <br />
+            <br />
+
+            <p>
+                In general, the Move Web View shows the progression of fish through the hatchery over time. In the display, time progresses from the left side of the screen to the right side of the screen. Unfortunately, the horizontal scale of the image cannot be made consistent. My initial intention was that the width of a rearing unit segment would represent the length of time the fish remained in that rearing unit, but this could not be done correctly. The problem was that the display had to show all relevant steps as the fish moved through the hatchery system. In some hatcheries, fish might spend only days in one location, while spending months in another. In fact, depending on how detailed the hatchery wished to follow the progress of the fish, they might spend as little as minutes in some locations, such as fish marking trailers and transfer tanks. To provide a consistent scale for such diverse time spans,  either some rearing units would take up no space at all, or others would require extensive horizontal scrolling, as they would be many times the width of any possible screen. Rather than adhering to such an awkward design, I felt it was more visually useful to abandon a consistent time scale and try to fit the whole extent onto the screen without scrolling. This means that the progression of the fish over time is shown, but the duration of time during which fish occupied any particular rearing unit is not well represented by the display.
+            </p>
+            <p>
+                The Move Web View started out as a nearly static view that only allowed the user to see information about the fish in a single move web. The goal was to make an interface that would allow the user to easily get information about the fish in the hatchery as to what they were, how they mixed, where they went.  The user could hover the mouse over the moves and the rearing units to see information about the fish in those locations. They could change what was displayed in the tooltips, as well, but that was all they could do. Even with that, it quickly became obvious that the Move Web View was so useful that it would be where most users would find the most value. Entering data in the Current Time View is often the easiest, as it is very easy to see all the rearing units together on the screen at the same time, but when it comes to visualizing hatchery operations over time, the Move Web View was clearly superior. Once I realized that, it also became obvious that the Move Web View couldn’t be static. People would want to be able to do almost the same things on the Move Web View that they could do in the Current Time View. There are a few differences between the two, but the Move Web View became a full featured means to interact with the data over time.
+            </p>
+            <p>
+                The side stall icons work almost the same as they do in the Current Time View, except that most can be dropped on either a rearing unit, on a move, or even on neither one, in some cases. Bottom stall icons also work the same as in the Current Time View. Button bar icons work only on the rearing units in the current move web, with the exception of those that change the appearance of all the move webs as they are displayed, along with some button plugins that allow move webs to be combined onto a single page.
+            </p>
+            <p>
+                Additionally, there are more interactions possible with a rearing unit.
+            </p>
+
+            <img src="Images/SingleAU.png" />
+            <br />
+            <br />
+
+            <p>
+                There are RWPB icons for each rearing unit, just as there are in the Current Time View, but since there was insufficient space to draw the individual icons in the rearing unit the individual icons are accessed by hovering the mouse over the solitary icon in the upper left corner of the rearing unit. This brings up a floating image of the eight RWPB icons. The Current Time View works the same when the view is zoomed out too far to leave space for the RWPB icons.
+            </p>
+
+            <img src="Images/RWPBFloating.png" />
+            <br />
+            <br />
+
+            <p>
+                One thing that is missing from the Move Web View is all of the mortality moves. Mortalities are moves, just like any other, but if mortalities are being enumerated every day, there would be so many of them that they would be a solid border around each rearing unit. Individual mortalities would be indistinguishable from one another. Therefore, I decided to leave mortalities off entirely. Viewing and managing mortalities can be done via a plugin.
+            </p>
+            <p>
+                A few other things that can be seen for a rearing unit in Move Web View is that a rearing unit that still has fish will have an open end, while one that has been emptied will have a closed end.
+            </p>
+
+            <img src="Images/SingleAU.png" />
+            <img src="Images/SingleAUOpen.png" />
+            <br />
+            <br />
+
+            <p>
+                The location of moves in and out of a rearing unit indicate when the move happened. For example, a move out of the end of a rearing unit shows that the move included all the remaining fish in the rearing unit, thereby emptying it.
+            </p>
+            <p>
+                Since the scale of time on the horizontal axis is not linear, the spatial distance between two moves in or out is not meaningful. However, the relative position of two moves is meaningful.
+            </p>
+
+            <img src="Images/MultipleMovesIn.png" />
+            <br />
+            <br />
+
+            <p>
+                If a certain move happened after some other move, then the arrow for the move will be found to the right of the move it is after. This allows the user to visualize the sequence of how fish were added or removed from a rearing unit. Also note that some moves will have been recorded as having happened all at the same time. The date of any move can be seen in the tooltip for the move when the mouse hovers over the move.
+            </p>
+
+            <img src="Images/MultipleSimultaneousMovesIn.png" />
+            <br />
+            <br />
+
+            <p>
+                While it may be that no two moves are truly at exactly the same time, it isn’t always useful for data management to differentiate the order of moves. Therefore, allowing multiple moves to be at the same time, users have the flexibility to enter data as best suits their needs. If they want more precision, they can have it. If they don’t need to be so precise, the program won’t require them to be.
+            </p>
+            <p>
+                Therefore, the Current Time View shows the current state of the hatchery, while the Move Web View shows how groups of fish moved through the hatchery over time. The Current Time View allows the user to visualize the current state of the system, select rearing units intuitively, and interact with the system as it currently stands. The Move Web View allows the user to view and interact with historic data, whether the fish are still currently in the hatchery, or not. The Move Web View also allows the user to enter and edit both new and historic data in a versatile, drag and drop, fashion. The Move Web View is not quite as intuitive as the Current Time View, but it is still very easy to learn, easy to use, and fully extensible via plugins.
+            </p>
+            
+            <br />
+
+            <h2>Why Desktop</h2>
+            <p>
+                The plugin design allows every hatchery to choose just the functionality they need, as well as to create custom plugins for their specific needs, which can then be made available to anybody else who would benefit from them. The design also allows hatcheries to change their operations over time while the program only need change the set and behavior of the plugins. However, the use of plugins also means that the Hatchery Information System can not be a web application.
+            </p>
+            <p>
+                All web applications run off of web servers. There is a powerful advantage to web applications, as there is only one installation and one database. All users are just hosting the display of the data in the web browser on their local machines. Any code used by the web application must be either on the web server, or on some trusted external site. This makes it difficult, though not impossible, to customize a web application to an individual user, but it precludes the ability to extend the application through plugins.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

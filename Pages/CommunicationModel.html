@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/General.css" />
+</head>
+<body>
+    <!-- This may not be necessary -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Hatchery Information System</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Models.html">Model Overview</a>
+                        <a class="nav-link" href="RUBOModel.html">Rearing Unit Business Object</a>
+                        <a class="nav-link" href="FBOModel.html">Fish Business Object</a>
+                        <a class="nav-link" href="Models.html">Growth Core</a>
+                        <a class="nav-link" href="Models.html">Semi DAL</a>
+                        <a class="nav-link" href="CommunicationModel.html">Communication</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Philosophy
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Rationale.html">Rationale</a>
+                        <a class="nav-link" href="The Future Direction.html">Future Direction</a>
+                        <a class="nav-link" href="NumberFlow.html">Managing Numbers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plugins
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="PluginOverview.html">Plugin Overview</a>
+                        <a class="nav-link" href="IHISGeneral.html">IHISGeneral</a>
+                        <a class="nav-link" href="IMWVSupplemental.html">IMWVSupplemental</a>
+                        <a class="nav-link" href="IShapeFactory.html">IShapeFactory</a>
+                        <a class="nav-link" href="IMetric.html">IMetric</a>
+                        <a class="nav-link" href="IColorControl.html">IColorControl</a>
+                        <a class="nav-link" href="IAPI.html">IInternalAPI</a>
+                        <a class="nav-link" href="ISilentPartner.html">ISilentPartner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutPage.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container-fluid mainText">
+        <h1>Communication Model</h1>
+
+        <h2>Purpose of the Model</h2>
+        <p>
+            Originally, the Hatchery Information System was intended for use on a single computer. I was more familiar with smaller facilities where there might be only one computer for data management, or at most a few computers all in the same room. Even in larger facilities, it often ends up being the case that one person is assigned data tasks, or a single computer is dedicated to that purpose. Still, that would be overly limiting. Ideally, a hatchery data management system should be able to work on as many computers as is desired, within reason.
+        </p>
+        <p>
+            The database behind the Hatchery Information System is Microsoft SQL Server Express, which easily handles a fair number of simultaneous users. Installing the database on one system while installing the program on several systems that all share a LAN would present no technological problem. All the installations would be able to work with the same database simultaneously. However, if none of the installations new about each other, the end result would be less than desirable. Changes on one system would only show up on the others once the others had been restarted or otherwise manually refreshed, a burden that would quickly become a nuisance to all users.
+        </p>
+        <p>
+            The solution is that the computers must talk to each other to some extent. Fortunately, in these times, all computers at a given hatchery are likely to be behind a firewall on what amounts to their own private LAN. That design offers up the solution that was implemented in the Communications model in the Hatchery Information System.
+        </p>
+        <br />
+
+        <h2>Communications Model</h2>
+        <p>
+            The Hatchery Information System is primarily a graphical interface for fish hatchery data management. As such, the program resembles a game in many aspects, and thus the Communications model was designed much like a LAN game from the 90s. All installations of the Hatchery Information System will start up an instance of the Communications model as one of their first acts. The Communications model then listens for, and broadcasts, UDP packets to other listeners on the same LAN. If there are no other installations, no messages will be received, but that does not matter.
+        </p>
+        <p>
+            UDP is a good choice for this type of communication. Unlike TCP, where a connection must be established and maintained, UDP is a connection-less protocol with the ability to broadcast to all listeners. All firewalls will block UDP packets by default, so the communication will remain within the LAN. Since the packets are quite small, and the connection-less protocol is defined as being unreliable, UDP communication is very fast. An unreliable protocol means that no particular message is guaranteed to be received by anybody. TCP guarantees receipt by establishing a connection with the destination. UDP only guarantees that the message is sent, not that it has been received.  The unreliable nature of UDP is not a hindrance for LAN games because losing a packet here and there has no overall impact. In the case of the Hatchery Information System, losing a packet can be a bit more significant, so a tracking system is used to improve the reliability, though a hatchery LAN is unlikely to be so noisy that packet loss becomes a big issue. Since the protocol is fast, allows broadcasting, doesn’t require connections, and any losses can be managed for, UDP is an excellent choice for communication between installations of the Hatchery Information System at a single hatchery.
+        </p>
+        <p>
+            The Communications model is really just the postmaster for the system. Other parts of the system send messages to the model, which then broadcasts the message to the network. Any messages received by the model are turned into internal messages that are announced to the system using events.
+        </p>
+        <p>
+            Messages posted to the Communications model by parts of the program, announce any changes that have been made on that installation which are of interest to other installations. For example, if fish are moved, the <a href="Pages/FBOModel.html">Fish Business Object</a> model will send a message announcing the move once it has happened. That message will be received by the Communications model of any other installation, which will pass the message on to their Fish Business Object, which will know to throw out any Move Webs impacted by the move such that they get reloaded as needed. Similarly, if a rearing unit is split, the Rearing Unit Business Object model sends a message announcing which rearing unit has changed. It doesn’t say what the change is, though, because that is irrelevant to any listener. The Communication model of any listener will forward the change to the Rearing Unit Business Object model of that instance, which will then rebuild and redraw the affected rearing unit. The Graphics Core model performs a similar operation with any change that impacts size. Since fish moves can impact size, the Growth Core model will also receive, and take action on, any move messages sent from other Fish Business Object models.
+        </p>
+        <p>
+            All plugins can send messages, as well. These can be entirely custom, though how useful a custom message is, depends on the receiver being able to understand the message received. The critical messages for drawing the screen will come from the Hatchery Information System models. The only parts of the system that will pay attention to custom messages are those for whom the custom message has meaning.
+        </p>
+        <p>
+            By communicating in this fashion, different installations of the Hatchery Information System at the same hatchery, can be kept up to date about changes made on other installations. A change made on one will be instantly reflected on all the others. No system should be out of date for longer than a fraction of a second. Keeping all installations up to date was the purpose for which the Communication model was created, but the model proved to have the means to solve a different problem, which led to the Godfather mechanism.
+        </p>
+        <br />
+
+        <h2>The Godfather</h2>
+        <p>
+            Suppose there is a hatchery with three installations of the program and a flow monitoring plugin that writes the flow to the database periodically. If the plugin were installed on all systems, it would write the information three times, which is quite useless. Installing the plugin on only one system would work, but only so long as that one system is always on. That works, but it isn’t ideal. The Godfather concept was added to address this situation and provide a better solution.
+        </p>
+        <p>
+            The Godfather is a specially identified installation that all installations know about. All installations are capable of being the Godfather, but only one will ever be in that role at any given time. If the Godfather installation is turned off (either the computer is shut down or the program is terminated), a second installation will take over the Godfather role within a few seconds. The Communications model is how this is implemented.
+        </p>
+        <p>
+            When an installation of the Hatchery Information System starts up, the Communications model starts sending out a message every second or so. Since UDP messages are so small and fast, a message as infrequent as once a second, of such small size, will go unnoticed on even a busy network. The message is the heartbeat message, which contains very little information, but one thing it contains is the Godfather identity. If this is the only installation, that heartbeat will include the identity of that installation. If another installation starts up, receiving the heartbeat message with the Godfather identity will suppress the new installation and it will just repeat the same Godfather identity in its heartbeat. Therefore, one system is the Godfather and suppresses all the others.
+        </p>
+        <p>
+            If the Godfather system is shut down, it will stop sending out heartbeats. The other systems will notice the absence of heartbeats fairly quickly, at which point, the first to notice the absence will start sending out Godfather heartbeats of its own, which will suppress the rest. In other words, if the Godfather system shuts down, a new system will take over the role within a few seconds.
+        </p>
+        <p>
+            The Godfather system is convenient, as any plugin can identify whether or not it is on the Godfather system. A plugin that is designed to poll some automated resource can be written to only poll if it is the Godfather. Therefore, the plugin can be included with all installations of the Hatchery Information System at that facility, and only the Godfather will be the one reading the automated resource and writing it to the database. All other installations that are not the Godfather will be suppressed. If the Godfather system is shut down, the role will be passed to a new computer and reading the resource will be handed off within seconds. Thus all installations can include the same plugins, and can decide among themselves who should be taking action.
+        </p>
+        <br />
+
+    </div>
+</body>
+</html>

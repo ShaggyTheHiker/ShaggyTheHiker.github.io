@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/General.css" />
+</head>
+<body>
+    <!-- This may not be necessary -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Hatchery Information System</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Models.html">Model Overview</a>
+                        <a class="nav-link" href="RUBOModel.html">Rearing Unit Business Object</a>
+                        <a class="nav-link" href="FBOModel.html">Fish Business Object</a>
+                        <a class="nav-link" href="Models.html">Growth Core</a>
+                        <a class="nav-link" href="Models.html">Semi DAL</a>
+                        <a class="nav-link" href="CommunicationModel.html">Communication</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Philosophy
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Rationale.html">Rationale</a>
+                        <a class="nav-link" href="The Future Direction.html">Future Direction</a>
+                        <a class="nav-link" href="NumberFlow.html">Managing Numbers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plugins
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="PluginOverview.html">Plugin Overview</a>
+                        <a class="nav-link" href="IHISGeneral.html">IHISGeneral</a>
+                        <a class="nav-link" href="IMWVSupplemental.html">IMWVSupplemental</a>
+                        <a class="nav-link" href="IShapeFactory.html">IShapeFactory</a>
+                        <a class="nav-link" href="IMetric.html">IMetric</a>
+                        <a class="nav-link" href="IColorControl.html">IColorControl</a>
+                        <a class="nav-link" href="IAPI.html">IInternalAPI</a>
+                        <a class="nav-link" href="ISilentPartner.html">ISilentPartner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutPage.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container-fluid mainText">
+        <h1>IShapeFactory</h1>
+        <p>
+            The IShapeFactory interface is used for rearing unit types. A typical hatchery might include numerous physical rearing units. These might be all the same shape, or several different shapes. The shape of the rearing unit is important for determining the volume, the behavior of the rearing unit in response to splitting, and other factors. Therefore, when the Hatchery Information System loads a hatchery, the <a href="RUBOModel.html">Rearing Unit Business Object</a> must create instances of the rearing units with the right shape. The IShapeFactory instance is what the Rearing Unit Business Object model uses to create an instance of any specific shape of rearing unit. The name of the interface comes from the fact that the object that implements the interface creates instances of IShape objects, which are generalized shapes for the physical rearing unit structures, while the actual dimensions of the structure are stored in the database. The factory can create as many shapes of any type as needed, which the Rearing Unit Business Object model then fleshes out with the dimensions from the database.
+        </p>
+        <p>
+            The IShapeFactory interface is the only plugin interface that is not loaded by the main Hatchery Information System program. Any object that implements IShapeFactory will be created and managed by the Rearing Unit Business Object, not the Hatchery Information System. A plugin that includes an object that implements the IShapeFactory can also include objects that include any of the other <a href="PluginOverview.html">loadable plugins</a>, since dlls holding plugins are all located in the same folder on the computer. Rearing Unit Business Object will instantiate the IShapeFactory object, while Hatchery Information System will instantiate the others.
+        </p>
+
+        <h2>Existing Plugins</h2>
+        <h3>Rectangular</h3>
+        <p>
+            The rectangular rearing unit is perhaps the most common type found at hatcheries. This type is a vertical sided rearing unit that can be divided in any location, and can have keyways placed wherever needed. The rectangular rearing unit forms the base for most vats and raceways.
+        </p>
+
+        <img src="../Images/KeywaysImage.png">
+        <br />
+        <br />
+
+        <h3 id="ShapeHeathStack">Heath Stack</h3>
+        <p>
+            The Heath Stack is a stack of up to eight trays. The number of trays in this plugin can be set in the <a href="IHISGeneral.html#HatcheryDesigner">hatchery designer</a> by the user when the hatchery is designed, but the number cannot exceed eight. Of course, two of these could be stacked atop one another to result in sixteen total trays, but they would be in two groups of eight. The Heath Stack is egg only and the individual trays cannot be divided.
+        </p>
+        <img src="../Images/HeathStacks.png">
+        <br />
+        <br />
+
+
+        <h3>Circular</h3>
+        <p>
+            The circular rearing unit comes in two flavors. The first is the raceway form, the second is the upweller form. Visually, the two are nearly identical, but the upweller can only hold eggs, whereas the raceway form can never hold eggs. Neither form can be divided, but the plugin could form the basis for divisible circular rearing units with fixed keyways.
+        </p>
+        <img src="../Images/Circular.png">
+        <br />
+        <br />
+
+        <h3>Pond</h3>
+        <p>
+            The pond plugin is for a standard, vertically sided, indivisible, pond. This is not ideally suitable for use as an earthen pond, which would have sloped sides, but an earthen pond plugin would be trivial to make from this one. The pond plugin cannot be divided, and can’t hold eggs.
+        </p>
+        <p>
+            The pond need not be solely used as a pond. The same plugin could be used for any indivisible, vertically sided, container. Therefore, it could be used for coolers, transfer tanks, and any such thing that didn’t need any features beyond those that the pond offers.
+        </p>
+        <img src="../Images/StandardPond.png">
+        <br />
+        <br />
+
+        <h3>Vertical Dual Pond</h3>
+        <p>
+            The vertical dual pond plugin is a pond with a central divider with fixed keyways. The vertical dual pond is a slight variation on the standard pond, as it is also vertically sided and can only be divided at the fixed keyways, which will divide it evenly in half. Water flows into both halves, typically. The vertical dual pond can only be divided at the fixed keyways.
+        </p>
+        <img src="../Images/VerticalDual.png">
+        <br />
+        <br />
+
+        <h3>Horizontal Dual Pond</h3>
+        <p>
+            The horizontal dual pond is a plugin for a vertically sided pond where the water flows through fixed gaps in the middle, which can be divided at fixed keyways. This is a pretty rare arrangement, as water flows into one pond, then into the next, which is not ideal for water quality, but the design is an obvious and very slight change from the Vertical Dual Pond. The horizontal dual pond can only be divided at the fixed keyways.
+        </p>
+        <img src="../Images/HorizontalDual.png">
+        <br />
+        <br />
+
+        <h3>Quad Pond</h3>
+        <p>
+            The quad pond is a variation on the pond, in that it is a vertically sided pond with a cross-shaped structure in the middle with one or more fixed keyways in each side of the cross. This means that the whole area can be divided in half, in quadrants, or managed as an open pond. Dividing the quad pond can only be done at the fixed keyways, but this can allow fish to be held in a quarter of the total area, half the total area, three quarters of the total area, or all of the total area.
+        </p>
+        <img src="../Images/QuadPondWithSplitters.png">
+        <br />
+        <br />
+
+        <h3>Fish Marking Trailer</h3>
+        <p>
+            The fish marking trailer is a pretty special plugin. Fish are moved into the fish marking trailer just like any other rearing unit, but when fish are moved out of the fish marking trailer, the user can add marks to the fish. Moves out of the fish marking trailer are considered to be very accurate counts, and therefore are type actual, as discussed in <a href="NumberFlow.html#TypesExplained">number flow</a>.
+        </p>
+        <p>
+            The fish marking trailer has no real volume, so obtaining values for metrics such as <a href="IMetric.html#MetricDensityIndex">density index</a> makes no sense. All such values can still be obtained, it’s just that they have no meaning, since neither depth, flow, nor volume are anything other than contrived constants. Fish are not expected to remain in fish marking trailers longer than hours, at most, and usually only for minutes.
+        </p>
+        <img src="../Images/FMT.png">
+        <br />
+        <br />
+    </div>
+</body>
+</html>

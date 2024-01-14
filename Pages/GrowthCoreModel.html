@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/General.css" />
+</head>
+<body>
+    <!-- This may not be necessary -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Hatchery Information System</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Models.html">Model Overview</a>
+                        <a class="nav-link" href="RUBOModel.html">Rearing Unit Business Object</a>
+                        <a class="nav-link" href="FBOModel.html">Fish Business Object</a>
+                        <a class="nav-link" href="Models.html">Growth Core</a>
+                        <a class="nav-link" href="Models.html">Semi DAL</a>
+                        <a class="nav-link" href="CommunicationModel.html">Communication</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Philosophy
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Rationale.html">Rationale</a>
+                        <a class="nav-link" href="The Future Direction.html">Future Direction</a>
+                        <a class="nav-link" href="NumberFlow.html">Managing Numbers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plugins
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="IAPI.html">IAPI</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="PluginOverview.html">Plugin Overview</a>
+                    <a class="nav-link" href="IHISGeneral.html">IHISGeneral</a>
+                    <a class="nav-link" href="IMWVSupplemental.html">IMWVSupplemental</a>
+                    <a class="nav-link" href="IShapeFactory.html">IShapeFactory</a>
+                    <a class="nav-link" href="IMetric.html">IMetric</a>
+                    <a class="nav-link" href="IColorControl.html">IColorControl</a>
+                    <a class="nav-link" href="IAPI.html">IInternalAPI</a>
+                    <a class="nav-link" href="ISilentPartner.html">ISilentPartner</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container-fluid mainText">
+        <h1>Growth Core</h1>
+        <p>
+            Fish grow over time. Fish growth can be measured either by measuring the length of the fish, the weight of the fish, or both. The length and weight of fish are related, as a longer fish will generally be a heavier fish, with weight increasing at roughly the cube of the length. If both length and weight are measured, the condition factor of the fish can be calculated, which is a measure of the plumpness of the fish. The growth of the fish over time, the projected size of the fish at some point in the future, the condition of the fish, the absolute size of the fish at any given time, and the conversion of fish food into fish mass, are all of interest to fish hatchery management. Therefore, measuring fish growth over time is usually important for hatchery operations.
+        </p>
+        <p>
+            The simplest means of measuring fish growth over time is to take a sample of fish and either weigh them, measure their lengths, or both. Taking such a measurement is both time consuming for hatchery staff and stressful for the fish, so a balance must be struck between the accuracy of the measure, the frequency of the measure, and the cost of the measure both for staff and fish. For this reason, measurements are taken only periodically, which can leave substantial gaps between measurements. Growth between measurements can only be an estimate.
+        </p>
+        <p>
+            Fish growth is also inconsistent between hatcheries, between raceways, and over time for any one location. Different types of food, different temperatures, different water chemistry, crowding, disease, and other factors can all impact fish growth. For any long established fish hatchery, several of the important factors impacting fish growth will be known. For example, the hatchery staff may well know that fish will take less food as water cools off during the winter, or possibly if it heats up too much during the summer. For this reason, long established fish hatcheries with seasoned personnel, will have a fair understanding of how growth will change over time.
+        </p>
+        <p>
+            The purpose of the Growth Core model is to capture all of the growth information gathered by the hatchery such that it can be used to obtain the estimated size of the fish, either by length or weight, at any given time for any given location, which includes projecting growth into the future.
+        </p>
+
+        <br />
+
+        <h2>The Growth Core</h2>
+        <p>
+            The Growth Core model has a single task, which is to be able to provide an estimate for the size of fish for any given location past, present, or future. It is designed to make use of whatever information is accessible, and to adjust the growth as new information is received. The model is built around a basic growth curve, but is designed such that better growth curves can be swapped in as better information is obtained.
+        </p>
+        <p>
+            The basic growth curve at the heart of the Growth Core model is a constant increase in fish length over time. The change in the length of fish is called the Daily Delta Length or DDL. The basic growth model would be a constant DDL, which may be reasonably accurate for hatcheries with constant temperature water and reasonably constant conditions. Therefore, if no other information is provided to the Growth Core, there will still be a growth curve, it will just be based on a constant change in fish length over time, a situation that will only be roughly accurate for some fish hatcheries. This basic curve can be improved on both by taking measurements, and by replacing the curve with one better suited to a particular hatchery.
+        </p>
+        <p>
+            The protocol for any given fish hatchery may be to measure weight, length, or both. The measurements may be taken frequently, infrequently, or not at all. Which measurements are taken, and when, is up to the hatchery. In the Hatchery Information System design, all measurements of weight, length, or condition factor would be entered into plugins designed specifically for the measurement in question. The Growth Core model will intercept measurements entered into these plugins to improve the growth model.
+        </p>
+        <p>
+            The size of the fish at any time will be estimated by the Growth Core. If an actual measurement is taken, that measurement acts as a fix on the size of the fish at that time. When the Growth Core receives an actual measurement, it compares that new measure to the model’s estimate of size, and adjusts the growth curve upwards or downwards such that it passes through the new point. In other words, the model is estimating growth, and when it gets a fix on the true size, it then changes its estimate to take into account the new information. Therefore, every measurement will correct the growth between the last measurement and the current one, as well as improving the estimated growth going forwards until the next measurement is taken. This approach means that the estimated size produced by the Growth Core will be improved with each size measurement taken on the fish.
+        </p>
+        <p>
+            The other way to improve the estimate produced by the Growth Core model is to replace the default growth curve with a better one. After Hatchery Information System has finished loading all plugins, the Growth Core will send out a request for an IDDL interface implementation. Any plugin can supply one, though there should never be more than one for a hatchery. The IDDL interface has a simple method that takes a location and time and returns an IDDLDuration. The IDDLDuration is an object that provides a DDL and the window of time during which the DDL is valid. This means that there can be a different DDL for each day, or a single DDL that spans years. This means that the IDDL can be used to implement a temperature dependent growth curve, density dependent growth curve, both, or any other growth curve the implementer can think of. The resulting curve will still be adjusted upwards or downwards based on measurements taken, but instead of the constant DDL of the default curve, the curve can now respond to any complexity of environmental factors.
+        </p>
+        <br />
+
+        <h2>Other Parts of the Growth Core</h2>
+        <p>
+            The primary purpose of the Growth Core is the function that returns the length or weight of fish at any given time in any given location, but the Growth Core model also exposes many parts of the internal workings of the model. It is possible to get the DDL for any day, the duration during which the DDL is valid, and so forth. There is also a configuration section, which allows users to adjust the values used by the default growth curve, though providing an alternate IDDL would be a superior alternative for most fish hatcheries. All of this functionality is there to facilitate creating plugins that examine how growth is calculated over time.
+        </p>
+
+    </div>
+
+</body>
+</html>

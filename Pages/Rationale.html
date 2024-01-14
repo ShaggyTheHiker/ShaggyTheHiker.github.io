@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/General.css" />
+
+    <title></title>
+</head>
+<body>
+    <!-- This may not be necessary -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Hatchery Information System</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Models.html">Model Overview</a>
+                        <a class="nav-link" href="RUBOModel.html">Rearing Unit Business Object</a>
+                        <a class="nav-link" href="FBOModel.html">Fish Business Object</a>
+                        <a class="nav-link" href="Models.html">Growth Core</a>
+                        <a class="nav-link" href="Models.html">Semi DAL</a>
+                        <a class="nav-link" href="CommunicationModel.html">Communication</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Philosophy
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Rationale.html">Rationale</a>
+                        <a class="nav-link" href="The Future Direction.html">Future Direction</a>
+                        <a class="nav-link" href="NumberFlow.html">Managing Numbers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plugins
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="PluginOverview.html">Plugin Overview</a>
+                        <a class="nav-link" href="IHISGeneral.html">IHISGeneral</a>
+                        <a class="nav-link" href="IMWVSupplemental.html">IMWVSupplemental</a>
+                        <a class="nav-link" href="IShapeFactory.html">IShapeFactory</a>
+                        <a class="nav-link" href="IMetric.html">IMetric</a>
+                        <a class="nav-link" href="IColorControl.html">IColorControl</a>
+                        <a class="nav-link" href="IAPI.html">IInternalAPI</a>
+                        <a class="nav-link" href="ISilentPartner.html">ISilentPartner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutPage.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container-fluid mainText">
+        <h1>Hatchery Database Rationale</h1>
+        <h2>Reason For Being</h2>
+        <p>
+            Fish hatcheries generate a large amount of data year after year. In fact, for fish and wildlife agencies that operate conservation or research hatcheries, it is quite possible that the hatcheries generate more data annually than all other fisheries projects combined. The vast majority of the data generated by hatcheries has no readily apparent long term value, so it is usually discarded soon after collection, but the long term value of data can not be fully understood at the time it is collected. The main reason the data is discarded is simply because there isn’t a good place to store it, not because there is no value in the data. For this reason, the main impetus behind the creation of a hatchery database should be to create a storage location for all the data that is being collected and subsequently discarded. After all, the cost of collecting the data has already been paid, so discarding the data only means that no further use can be made of what could be a potentially valuable resource.
+        </p>
+        <p>
+            The long term retention of hatchery data is not the only reason, or even the main reason cited, for the development of a hatchery database. Most hatchery databases are developed for more immediate, short term, benefit, with the long term retention just being a happy side effect. Still, the long term retention should be considered when developing a database, as it can’t be known in advance what possible uses that data could be put to at a later date. However, it should also be kept in mind that near term uses tend to drive the development of hatchery databases, not long term data retention.
+        </p>
+        <br />
+
+        <h2>The Cost</h2>
+        <p>
+            Unfortunately, it makes no difference whether the goal of a hatchery database is short or long term. In all cases, hatchery databases end up being sufficiently large that they require more than the typical consideration when designing them. For example, at the time of this writing, I am aware of no good hatchery database resulting from less than four years of effort. That doesn’t mean three years of discussion and one year of writing code, either. The effort is four or more years of writing code, which results in a few hundred thousand lines of code. That volume of code adds to the overall cost of a hatchery database. Some studies have found that good quality production code ships with between one bug per hundred lines and one bug per thousand lines <a href="#references">[1][2]</a>, so a program that consists of a few hundred thousand lines of code can be expected to have hundreds to low thousands of bugs at the time it is considered “good quality.” Fixing those bugs will be an ongoing effort for several years after initial development is complete, and the fixing of some of the bugs will introduce or expose, still more bugs, so maintenance on a program of that size can be considered to be perpetual. For that reason, it is appropriate to expect that there will be two or more full time positions dedicated to maintaining the program, though they will likely also be able to work on other things, at least after the first few years. Either both positions will be programmers familiar with the code, or one will be a programmer while the other will be a data manager. In any case, whether the goal of a hatchery database project is long term or short term, the cost will be notable.
+        </p>
+        <p>
+            Furthermore, for a program of the size that hatchery databases reach, some consideration must be made for the long term viability of the project. After all, if four or more years have been dedicated to writing a program that is successful, then any positions associated with the maintenance of the project will need to remain filled, since times and needs keep on changing. Somebody will need to be up to speed on the large code base associated with the program, which means that for several years there will need to be a continuity plan around any positions related to the program. Furthermore, there will need to be a certain amount of documentation in addition to the source code itself. Finally, software doesn’t last forever. Few programs make it for twenty years or more, though a well-designed hatchery program is a good candidate for that kind of longevity. Ultimately, though, technology and needs both change. Some thought should be put into some long term sustainability.
+        </p>
+        <br />
+        <h2>Why So Large</h2>
+        <p>
+            So, why do hatchery programs end up being so large? Fish and wildlife agencies will often have numerous programs of one sort or another for acquiring data for different projects. These data acquisition and storage mechanisms might be as simple as spreadsheets, or as complex as databases with dedicated software front ends. Applications might be mobile, they might be web, they might be desktop, and they might be any mix of those three. Each option has strengths and weaknesses, but the bottom line is that fish and wildlife management agencies will have a fair amount of experience with data acquisition, and yet hatchery databases still stand out for their size. The reason for this has to do with stories.
+        </p>
+        <p>
+            Most data acquisition is based on stories. Often, these stories are quite simple. For example, with fish trapping, you have a fish, the data on the fish, and what you did with the fish. A trapping program will be this simple story repeated over and over, “here’s a fish, here’s the data on the fish, here’s what we did with the fish.” The reports that come out of a trapping program are just sets of these stories summed by day, month, season, sex, disposition, or any other metric of interest. Still, at the heart of the program is just that simple story repeated over and over for each fish trapped. The problem with hatchery databases is that there isn’t one simple story, but dozens of them, all interacting in complicated ways. Each story is quite simple, but there are so many of them, and they are often intimately intertwined with one another.
+        </p>
+        <p>
+            At the heart of a hatchery are the rearing units that hold fish. These rearing units can change over time, especially if they can be subdivided over the course of operating the hatchery. The rearing units, their size, whether they were split or merged, and how they change over time is the base story of a hatchery onto which all other stories are built. On top of the rearing unit story is a story of how the fish move through the system, which can be a story of almost any size. Fish get combined with others, split apart from others, moved from place to place, marked, measured, enumerated, and so on. How the fish move through the system is a story in itself, and since most data collection will involve the fish, knowing where the fish are, how they got there, and where they went from there, is the story that is found at the heart of most hatchery databases. However, that story can’t be understood without understanding the underlying rearing units. On top of that, fish grow over time. The story of fish growth is one which may involve measures of temperature, feed type, feed quantity, feed timing, crowding, dissolved oxygen, water flow (for turnover, if nothing else), and more. The factors that go into growth will differ by facility and objective, but each is a story of its own that combine to make up the story about the growth of the fish over time. Several of the stories involved in growth are dependent on knowing the number of fish in the rearing unit over time, so those stories are part of growth, but depend on the story of the fish and the story of the rearing units that the fish are found in.
+        </p>
+        <p>
+            Therefore, the reason why hatchery databases and hatchery data acquisition programs end up being so large is because of the large numbers of small stories that make up the narrative of a year in a hatchery. These stories are highly interdependent on one another, as well, such that it is hard to get a complete picture of hatchery operations if too many of the parts are left out of the design. The only way that the program can be reduced in size is by leaving out information. Any information left out has already been collected, so not only is the data a part of the complete story, but discarding it means wasting data that has already been collected. Doing a comprehensive job of acquiring hatchery data is probably unreasonable, but even gathering a useful subset of hatchery data is a sufficiently daunting prospect that anybody considering undertaking such a thing would be well advised to contemplate the actual cost.
+        </p>
+        <br />
+        <h2>The HIS Approach</h2>
+        <p>
+            The Hatchery Information System (HIS) was designed to reduce the costs associated with managing hatchery data. The size of a good hatchery data management system is inevitable. What HIS does is divide the problem up into smaller pieces, each of which can be isolated, tested, maintained, and potentially replaced, separate from all the rest of the pieces. Furthermore, the plugin design means that all the maintenance of the whole system does not have to fall on those who maintain the core models.
+        </p>
+        <p>
+            The core stories at the heart of the hatchery system, that of how rearing units change over time (RUBO), and how fish move through the system(FBO), are two of the core models in the program. The Growth Core (GC) model is a third model, which makes up the basis for a rich tracking of fish growth over time without constraining the factors that go into determining growth. Finally, every bit of data collection beyond those core models is accomplished by plugins, which are essentially tiny programs dedicated to collecting one story in the context of the core stories. This means that the data collection is small enough to be easy to maintain, replaceable, and extendable as needs change over time. All data collection and data reporting is handled in a modular fashion much as building blocks. This does not remove the cost of a hatchery database, nor does it reduce the size, but it does make it more manageable over time. Furthermore, anybody who can write a dll that consumes and is consumable by any of the .NET suite of programming languages, can add plugins that extend the scope of the HIS program.
+        </p>
+
+        <br />
+        <br />
+        <div>
+            <p id="references">
+                [1] Coralogix Blog: “This is what your developers are doing 75% of the time, and this is the cost you pay”;
+                <a href="https://coralogix.com/log-analytics-blog/this-is-what-your-developers-are-doing-75-of-the-time-and-this-is-the-cost-you-pay/"> https://coralogix.com/log-analytics-blog/this-is-what-your-developers-are-doing-75-of-the-time-and-this-is-the-cost-you-pay/</a>
+            </p>
+            <p>[2] <a href="https://www.wired.com/2004/12/linux-fewer-bugs-than-rivals/#:~:text=Commercial%20software%20typically%20has%2020,code%20in%20the%20Linux%20kernel.">https://www.wired.com/2004/12/linux-fewer-bugs-than-rivals/#:~:text=Commercial%20software%20typically%20has%2020,code%20in%20the%20Linux%20kernel.</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

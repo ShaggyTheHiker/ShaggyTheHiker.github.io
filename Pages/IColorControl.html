@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/General.css" />
+</head>
+<body>
+    <!-- This may not be necessary -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Hatchery Information System</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Models.html">Model Overview</a>
+                        <a class="nav-link" href="RUBOModel.html">Rearing Unit Business Object</a>
+                        <a class="nav-link" href="FBOModel.html">Fish Business Object</a>
+                        <a class="nav-link" href="Models.html">Growth Core</a>
+                        <a class="nav-link" href="Models.html">Semi DAL</a>
+                        <a class="nav-link" href="CommunicationModel.html">Communication</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Philosophy
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Rationale.html">Rationale</a>
+                        <a class="nav-link" href="The Future Direction.html">Future Direction</a>
+                        <a class="nav-link" href="NumberFlow.html">Managing Numbers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plugins
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="PluginOverview.html">Plugin Overview</a>
+                        <a class="nav-link" href="IHISGeneral.html">IHISGeneral</a>
+                        <a class="nav-link" href="IMWVSupplemental.html">IMWVSupplemental</a>
+                        <a class="nav-link" href="IShapeFactory.html">IShapeFactory</a>
+                        <a class="nav-link" href="IMetric.html">IMetric</a>
+                        <a class="nav-link" href="IColorControl.html">IColorControl</a>
+                        <a class="nav-link" href="IAPI.html">IInternalAPI</a>
+                        <a class="nav-link" href="ISilentPartner.html">ISilentPartner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutPage.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container-fluid mainText">
+        <h1>IColorControl and IMWVColoring</h1>
+        <p>
+            One thing I noticed while working at hatcheries was that some of them used colorful diagrams to help keep track of where different groups of fish were located in the facility. For a program that was highly visual, this seemed like a really useful thing to be able to implement. I wanted the user to be able to gain information from the screen with just a glance. Both the IColorControl and IMWVColoring interfaces are designed to facilitate that coloring. The IColorControl interface is used in the <a href="../index.html#CurrentView">Current Time View</a>, while the IMWVColoring interface is used for the <a href="../index.html#MoveWebView">Move Web View</a>.
+        </p>
+        <p>
+            The coloring concept was that regions would be identified for all the rearing units, which could be colored, and the hatchery could choose what the colors should indicate. I didn’t want to constrain hatcheries as to what they could use those indicators to indicate. Therefore, the interfaces were added such that plugins could be written to extend and customize the coloring.
+        </p>
+        <p>
+            Each rearing unit in the Current View is drawn with five different indicators that can be colored. The outer border, the rearing unit name, and the background of the rearing unit name, can only be used as indicators for the entire structure. They can’t be used to indicate differences between different sub-divisions within the structure. The inner border and the tint of the water can both be used as indicators for just rearing units within the structure.
+        </p>
+        <p>
+            Since the Move Web View does not have structures and rearing units within structures, there are only two indicators for the Move Web View, the border and the tint. The drawing is already sufficiently constrained that adding an inner border of useful size was felt to be too messy.
+        </p>
+        <p>
+            An object that implements either of these two interfaces announces which attributes they will show indicators for. A single object that implements either interface can announce multiple attributes. For example, one object is used for stock, is marked, has ad clip, has PIT tag, and has CWT tag. These aren’t all particularly closely related, nor do they need to be. The main program gathers the set of all attributes that any plugin will color on. Hatchery personnel can then choose which attributes they want, if any, for each indicator, and configure the colors that will be used.
+        </p>
+        <p>
+            Choosing the color for an indicator is a matter of configuration. The interface has an option to show a configuration button. If that is shown, then the interface configuration method will be called when the button is pressed. This allows for a rich selection of how coloring happens. For example, an indicator like stock would just show one of a few different colors to indicate the stock of the fish in that rearing unit (chosen by the hatchery), while an indicator like density index would be able to tint the water different colors to indicate different levels of crowding in the rearing unit. Color controls can be quite simple or fairly complex, depending on what will best show the attribute to the user.
+        </p>
+        <p>
+            By implementing this interface on an object, a plugin can enhance the use of the program as a whole by allowing the program to show, using colors, how the fish are arranged at the hatchery, or their status. Of course, this is only different colors, which is not going to be accessible to all people, but the option is included to make the Hatchery Information System more versatile and configurable.
+        </p>
+        <br />
+        <br />
+
+        <h2>Existing Plugins</h2>
+        <h3 id="CCDensityIndex">Density Index</h3>
+        <p>
+            The plugin will color the rearing unit-level indicators on the density index of the rearing unit. The plugin will not color the structure level indicators. The reason that this plugin only colors the rearing unit level indicators is that density index depends on the size of the rearing unit, not the size of the structure. Therefore, it only makes sense at the rearing unit level.
+        </p>
+        <p>
+            Coloring can be configured to change colors when the metric exceeds thresholds set in the configuration, and the colors can shade from light to dark as the metric approaches the threshold.
+        </p>
+        <p>
+            This plugin is combined with the IMetric <a href="IMetric.html#MetricDensityIndex">Density Index</a> plugin object.
+        </p>
+        <br />
+
+        <h3 id="CCLotNumber">Lot Number</h3>
+        <p>
+            I have seen a few hatcheries that colored trays based on lot numbers, so adding a plugin to do that was pretty obvious. The plugin will color either the whole structure or single RU on the lot number trait. The most likely use for this plugin would be to color trays in a <a href="IShapeFactory.html#ShapeHeathStack">Heath Stack</a>, so the rearing unit indicators are best, but the structure level indicators can also be used in cases where that makes sense.
+        </p>
+        <p>
+            The configuration for the lot number coloring is similar to that used for stocks and species in the <a href="#CCRUColorBasics">RU Color Basics</a>. The user can choose single colors for each lot, plus they can add a color for mixed lots. They can also opt for one of three options for mixed lots, which are to use the mixed lot color, or color on the lot that is the majority of the fish in the location, or to blend the colors for mixed lots. That last one is kind of fanciful, and will tend to look pretty ugly.
+        </p>
+        <p>
+            This plugin is the same object as the <a href="IHISGeneral.html#LotEditor">Lot Editor</a> object, which is part of the magic fish group.
+        </p>
+        <br />
+
+        <h3 id="CCFlowIndex">Flow Index</h3>
+        <p>
+            The plugin will color the rearing unit-level indicators on the flow index of the rearing unit. The plugin will not color the structure level indicators. The reason that this plugin only colors the rearing unit level indicators is that flow index depends on the size of the rearing unit, not the size of the structure. Therefore, it only makes sense at the rearing unit level.
+        </p>
+        <p>
+            Coloring can be configured to change colors when the metric exceeds thresholds set in the configuration, and the colors can shade from light to dark as the metric approaches the threshold.
+        </p>
+        <p>
+            This plugin is combined with the IMetric <a href="IMetric.html#MetricFlowIndex">Flow Index</a> plugin object.
+        </p>
+        <br />
+        <h3 id="CCMaxDepthFlow">Percent Max Depth/Flow</h3>
+        <p>
+            The plugin colors the structure level indicators on the percent of the maximum for either depth or flow or both. There are no rearing unit level indicators, as these values are only measured for the whole structure, not for subdivisions within the structure.
+        </p>
+        <p>
+            This plugin is the same object as the IHISGeneral <a href="IHISGeneral.html#MassDepthFlow">Mass Depth/Flow</a> plugin and the IMWVSupplemental <a href="IMWVSupplemental.html#MWVMassDepthFlow">Mass Depth/Flow</a> plugin.
+        </p>
+        <br />
+        <h3 id="CCProjectedRelease">Release Prediction</h3>
+        <p>
+            The plugin colors either structure level or rearing unit level indicators on the projected release site. The user can configure which colors indicate which projected release site.
+        </p>
+        <p>
+            This plugin is the same object as the IHISGeneral and IMWVSupplemental button bar plugin for <a href="IHISGeneral.html#ProjectedReleaseSiteAndDate">projected release site and date</a>.
+        </p>
+        <br />
+
+        <h3 id="CCRUColorBasics">RU Color Basics</h3>
+        <p>
+            The plugin colors either structure level or rearing unit level indicators on species, stock, whether the rearing unit has fish, whether they are marked, or whether they have PIT tags, coded-wire tags or adipose clips. Some of these have very little configuration as they are only binary choices, while others, such as stock, have more complex configuration. Each stock or species can have its own color, along with a color for mixed trait groups.
+        </p>
+        <br />
+    </div>
+</body>
+</html>

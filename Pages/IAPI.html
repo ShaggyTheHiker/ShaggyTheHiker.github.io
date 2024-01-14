@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/General.css" />
+</head>
+<body>
+    <!-- This may not be necessary -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Hatchery Information System</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Models.html">Model Overview</a>
+                        <a class="nav-link" href="RUBOModel.html">Rearing Unit Business Object</a>
+                        <a class="nav-link" href="FBOModel.html">Fish Business Object</a>
+                        <a class="nav-link" href="Models.html">Growth Core</a>
+                        <a class="nav-link" href="Models.html">Semi DAL</a>
+                        <a class="nav-link" href="CommunicationModel.html">Communication</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Philosophy
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Rationale.html">Rationale</a>
+                        <a class="nav-link" href="The Future Direction.html">Future Direction</a>
+                        <a class="nav-link" href="NumberFlow.html">Managing Numbers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plugins
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="PluginOverview.html">Plugin Overview</a>
+                        <a class="nav-link" href="IHISGeneral.html">IHISGeneral</a>
+                        <a class="nav-link" href="IMWVSupplemental.html">IMWVSupplemental</a>
+                        <a class="nav-link" href="IShapeFactory.html">IShapeFactory</a>
+                        <a class="nav-link" href="IMetric.html">IMetric</a>
+                        <a class="nav-link" href="IColorControl.html">IColorControl</a>
+                        <a class="nav-link" href="IAPI.html">IInternalAPI</a>
+                        <a class="nav-link" href="ISilentPartner.html">ISilentPartner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutPage.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container-fluid mainText">
+        <h1>IInternalAPI</h1>
+        <p>
+            The IInternalAPI interface arose from a limitation of the Hatchery Information System. While the project is a Windows desktop application, I felt that it would be good to be able to put at least parts of the program onto mobile devices, such that data could be entered out on the hatchery grounds. Unfortunately, there are problems with doing that with the main project. While the program could be installed on Windows based portable devices, those are not all that suitable for use in a hatchery environment and even if a suitable device was found, the program would require that the device be on the network at all times. Being on the network would be possible with good WiFi coverage, but hatcheries tend to be spread out, and coverage is not guaranteed. Therefore, using the Hatchery Information System while walking around, would be problematic at many hatcheries.
+        </p>
+        <p>
+            When faced with that limitation, I began looking for a way around it. The main use of a mobile platform would only be for entering certain types of data. The rest of the program wasn’t needed, just a means to enter things like feed, weight, mortality, and so forth. This information could be gathered using a durable, relatively cheap, mobile device, in a disconnected state. What would be required was that the data could then be readily transferred to the Hatchery Information System once the device came back in range of the network on which the Hatchery Information System program was running.
+        </p>
+        <p>
+            The way I envisioned this working was that a small app could be written for the Android platform, which included some TCP functionality. The Hatchery Information System could then have a plugin written that would act as a TCP listener. When the Android device used for collecting the data came back into connection range, it could establish a TCP connection with the listener, package up the data it had into a JSON object, and pass that to the Hatchery Information System TCP listener plugin. The transfer of data could either happen automatically when the device came back into connection range, or when the user opted to transfer the data.
+        </p>
+        <p>
+            When the TCP listener plugin received the data, it would have to be able to know what to do with the JSON object it received.  The solution to that problem is where the IInternalAPI interface comes in. If a plugin has an object that implements the IInternalAPI interface, an instance of the object is created on startup, which is then registered with the <a href="Models.html#EventRaisers">Event Raiser</a> object. The idea was that the JSON data packet sent to the TCP listener would include the name and version of the IInternalAPI that should receive the data. The listener would use that name and version to look for the IInternalAPI object in the Event Raiser, and pass the data as an argument to the IInternalAPI interface object.
+        </p>
+        <p>
+            Once that was written, it quickly became obvious that the interface would have uses beyond the original one. Getting data from mobile devices would be possible, but the IinternalAPI approach meant that other plugins could be written that gathered data from other sources and passed it off to the IInternalAPI interface object directly, without using the TCP plugin. This arrangement could be used to reduce redundancy and improve reliability by facilitating testing. For example, there are a couple different weight measurement plugins. Originally, they both had to take care of gathering the data and writing it to the database. By writing an IInternalAPI plugin for weight, writing the data could be handled by the IInternalAPI implementation, while the original plugins would only have to gather the data, put it into a JSON object, and pass it to the IInternalAPI interface. The interface object could be tested independent of the data gathering plugins, and if anybody comes up with other plugins for gathering weight, they can simply package it up and send it to the IInternalAPI interface, as well, so they will not be responsible for writing to the database.
+        </p>
+        <p>
+            The IInternalAPI is also versioned, such that newer versions can coexist alongside older versions in the same installation of the Hatchery Information System. This could allow a plugin to choose the version it wanted to use for a particular submission.
+        </p>
+        <p>
+            Therefore, the IInternalAPI interface has become a means to separate the gathering of data from the writing of the data, thereby allowing for a simpler diversification of how data is gathered, as the different variations can rely on a tried and tested storage mechanism that they are not responsible for maintaining.
+        </p>
+        <br />
+        <br />
+
+        <h2>Existing Plugins</h2>
+        <h3 id="APIDepth">Depth API</h3>
+        <p>
+            This API should really be called the Depth and Flow API, as the one API takes in either depth information or flow information. The difference is the Type property in the JSON string, as if it starts with an F, that is flow, whereas if it starts with a D it is depth. Any other leading character results in an error, and no other characters out of the Type property are looked at. In other words, spelling doesn’t matter after the first character. The information is otherwise unremarkable.
+        </p>
+        <br />
+        <h3 id="APIFeed">Feed</h3>
+        <p>
+            The Feed API takes feed information regarding type(s), amount(s) and time. As an API, this one is a bit messy, as there are so many possible feed plugins. Whether or not this is truly suitable to work with a wide variety of plugins remains to be seen, but since feed entry is likely to be something well suited for a mobile app, a feed API is a necessity, even if many versions are required to handle different feed apps and plugins.
+        </p>
+        <br />
+        <h3 id="APIMarkQuality">Mark Quality API</h3>
+        <p>
+            This API takes mark quality information, which ends up being exposed as the Mark Quality metric. The API is expecting a total count, plus the number that were good, the number that were bad, and the number that were partial. The latter three must equal the total count. The marks are passed in as a trait set, as mark quality can’t necessarily be tied to a single mark. For example, if there are three coded-wire tag groups in the rearing unit, it is possible to measure the tag retention for the lot, but not for each tag code group individually.
+        </p>
+        <br />
+        <h3 id="APIMortality">Mortality API</h3>
+        <p>
+            Accepts new or edited data for mortality on any given date.
+        </p>
+        <br />
+        <h3 id="APIWeight">Weight</h3>
+        <p>
+            This plugin is poorly named, as it accepts new or edited data for weight or length on any given date. The validation and units are different if weight or length is supplied. The fields in the JSON object have to be different for each. Submitting both a weight and a length in the same JSON object is also supported. If there is a NewWeight field, then weight data gets written, and if there is a NewLength field then length gets written.
+        </p>
+        <br />
+    </div>
+</body>
+</html>

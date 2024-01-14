@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/General.css" />
+</head>
+<body>
+    <!-- This may not be necessary -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Hatchery Information System</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Models.html">Model Overview</a>
+                        <a class="nav-link" href="RUBOModel.html">Rearing Unit Business Object</a>
+                        <a class="nav-link" href="FBOModel.html">Fish Business Object</a>
+                        <a class="nav-link" href="Models.html">Growth Core</a>
+                        <a class="nav-link" href="Models.html">Semi DAL</a>
+                        <a class="nav-link" href="CommunicationModel.html">Communication</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Philosophy
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Rationale.html">Rationale</a>
+                        <a class="nav-link" href="The Future Direction.html">Future Direction</a>
+                        <a class="nav-link" href="NumberFlow.html">Managing Numbers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plugins
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="PluginOverview.html">Plugin Overview</a>
+                        <a class="nav-link" href="IHISGeneral.html">IHISGeneral</a>
+                        <a class="nav-link" href="IMWVSupplemental.html">IMWVSupplemental</a>
+                        <a class="nav-link" href="IShapeFactory.html">IShapeFactory</a>
+                        <a class="nav-link" href="IMetric.html">IMetric</a>
+                        <a class="nav-link" href="IColorControl.html">IColorControl</a>
+                        <a class="nav-link" href="IAPI.html">IInternalAPI</a>
+                        <a class="nav-link" href="ISilentPartner.html">ISilentPartner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutPage.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container-fluid mainText">
+        <h1>The Uncertain Future</h1>
+        <p>
+            While I feel that the approach taken by the Hatchery Information System is the best one possible for managing fish hatchery data, the <a href=Rationale.html>Rationale</a> section should make it clear that I am deeply ambivalent as to whether a hatchery data management system is even a good idea. The design is certainly a fun one, and is one where widespread adoption of the principles would benefit everybody. If there were multiple parties writing plugins, the library of existing plugins would be an increasing benefit to all involved. However, there are two significant caveats to that future.
+        </p>
+        <p>
+            The first caveat is simply that time marches forwards and drags technology along with it. If hatchery data management projects are expensive in time and money, that time and money could end up being stranded if technology moves in such a direction that the project is no longer viable. Whether or not this is a gamble worth taking is entirely up to each party. For example, the Hatchery Information System was started in 2010 using .NET framework 4.0. It has since been advanced to framework 4.8, but Microsoft has moved to .NET Core. Moving the Hatchery Information System to .NET Core would not be terribly difficult, but would require a certain amount of effort. Whether or not that is warranted is hard to say.
+        </p>
+        <p>
+            The second caveat is that the Hatchery Information System is almost certainly not complete for almost anybody. This isn’t only because there might be plugins that they would like, but because there’s a whole second half to the project that is too individualized to write in a broadly useful fashion. The Hatchery Information System is a program for hatcheries to enter hatchery data into a hatchery database, but how do you get that data back out?
+        </p>
+        <p>
+            The expectation for the Hatchery Information System is that the data from any participating hatchery will likely be sent to some central repository. This would require a fairly simple plugin to be written, but security considerations will mean that this plugin may well be quite different from one user to the next. The second half of that transfer would be a receiver, which would be a small program, probably a web-based API, that would accept the data transfer from a hatchery and put it into some centralized database. This, too, would not be a particularly difficult thing to write, though it would also tend to be highly custom to the recipient.
+        </p>
+        <p>
+            The bigger question is what happens to the data once it is in a central repository? It will need to be exposed to end users by some means. Some groups who have attempted to expose hatchery data in a usable fashion have used web sites, others have used internal dashboards. Either of those could make use of the read only versions of the <a href=RUBOModel.html>Rearing Unit Business Object</a>, the <a href=FBOModel.html>Fish Business Object</a>, and the <a href=GrowthCoreModel.html>Growth Core</a>, but either one would also tend to be highly individualized. The goal of the Hatchery Information System was to make a fish hatchery data management system that would be of use to a wide range of people, the proprietary nature of transferring and disseminating data is not consistent with that goal.
+        </p>
+        <p>
+            Worse than the proprietary nature of the task is the simple fact that I am not familiar with any system that is particularly good at disseminating the data they have. At best, each system that I have seen offers up a few canned snapshots of certain aspects of the data, with new canned snapshots added as the needs are identified. These snapshots tend to be tabular, limited, and visually drab, which is a shame considering how rich the underlying dataset is. However, these limitations are likely to be a feature of the dataset itself, not a result of any lack of imagination on the part of the developers. For example, those who want to see numbers at release, won’t want to see growth up to that point, or perhaps the disease history of the fish in question. Those who want to see growth may not care much about the marks on the fish, or perhaps the genetic information for the various family groups involved. Some views of the data will overlap, others will not. The net result is that any view of the data will likely serve one specific use while being unsuited to other uses. With potentially hundreds of possible views, a line must be drawn somewhere as to what to leave in and what to leave out.
+        </p>
+        <p>
+            Therefore, while the Hatchery Information System solves the largest part of the total problem very well, and transferring the data is a relatively simple part, the other big part of the problem has no general solution. Anybody who wants to take on the Hatchery Information System has to be aware of that fact and have a plan as to how they want to address it. They will have the same problem with any comprehensive means to manage fish hatchery data, but the problem still exists for the Hatchery Information System, and therefore the project can never be truly complete.
+        </p>
+
+    </div>
+</body>
+</html>
