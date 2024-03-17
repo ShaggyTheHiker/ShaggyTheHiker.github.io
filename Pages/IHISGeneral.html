@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/General.css" />
+    <title>The General Interface of the Hatchery Information System</title>
+    <meta name="description" content="An interface that serves to largely organize plugins for the Hatchery Information System. TThis interface manages most user interatction with the majority of plugins." />
 </head>
 <body>
     <!-- This may not be necessary -->
@@ -99,7 +101,7 @@
 
         <h2>Existing Button Bar Plugins</h2>
         <h3 id="HatcheryDesigner">Hatchery Designer</h3>
-        <img src="../Images/Designer.png">
+        <img src="../Images/Designer.png" alt="An icon for a plugin that allows the user to design hatchery layouts for use in the Hatchery Information System.">
         <br />
         <p>
             The hatchery designer is used to layout the rearing units for an individual hatchery. The user can arrange the rearing units in grids, using any <a href="IShapeFactory.html">shapes</a> that are available. Once they have the grids of rearing units laid out, the user can set the names, sizes, depths, orientation, and keyways for any set of the rearing units. Attention was paid to making the designer quick and easy to use, but since this is something that may only be used once in the life of any given hatchery, little attention was paid to sprucing up the graphics. The plugin is full-featured and easy to use, just not terribly appealing to look at.
@@ -109,7 +111,7 @@
         </p>
         <br />
         <h3>Feed Mass Entry</h3>
-        <img src="../Images/FeedSmall.png" />
+        <img src="../Images/FeedSmall.png" alt="An icon depicting a cartoonish sack of feed, which is used for a plugin to view and edit the feed supplied to a selection of rearing units over time. " />
         <br />
         <p>
             This plugin is closely related to the <a href="#MortalityMassEntry">Mortality mass entry</a> plugin. The same features are generally retained, though the mark specific button has been removed, as feed is not related to marks. The comment button is retained, though commenting on feed seems like a poor idea. Drag copy across multiple rearing units makes considerable sense for feed, though, as the same amounts will be fed to several rearing units, possibly at the same time.
@@ -119,7 +121,7 @@
         </p>
         <br />
         <h3>General Event Viewer</h3>
-        <img src="../Images/RotationCircle.png" style="height:64px;width:64px;" />
+        <img src="../Images/RotationCircle.png" style="height:64px;width:64px;" alt="An icon used for a plugin that allows the user to view the hatchery at different points in time." />
         <br />
         <p>
             The event viewer is part of the time travel group. The original idea behind the time travel plugins was to allow the <a href="../index.html#CurrentView">Current Time View</a> to show the state of the hatchery at different times. The only reasonable times to view were just before, or just after, certain events such as moves, as those were the only times when the display might materially change. Of course, since mortality events are moves, there could be any number of these. Ultimately, though, the time travel concept was not such a good idea. After all, the Current Time View could only show one point in time, whereas the <a href="../index.html#MoveWebView">Move Web View</a> could show a range of time, so once the Move Web View was created, the time travel aspect of this plugin no longer made sense. Still, the time travel plugins had a real value, as they showed events in order, with a means to show/hide different types of events. This allowed an easy means to see relevant actions in order. Thus the plugins remain, even if the time travel part might as well be removed.
@@ -129,7 +131,7 @@
         </p>
         <br />
         <h3>Genetic Information</h3>
-        <img src="../Images/GeneticsFatLine.png" />
+        <img src="../Images/GeneticsFatLine.png" alt="An icon depicting a caroonish DNA strand used for a plugin that shows genetic information for a rearing unit." />
         <br />
         <p>
             This plugin shows three different things, so the user must first choose what it is they want to look at. The first option is to show the genetic information for all fish currently on station. The second option is to show the genetic disposition for some species and brood year. The third option is to show the disposition for one genetic ID or parent ID.
@@ -142,7 +144,7 @@
         </p>
         <br />
         <h3 id="MassLotEditor">Lot Editor</h3>
-        <img src="../Images/Lot.png" />
+        <img src="../Images/Lot.png" alt="An icon used for a plugin that allows for editing the lot numbers of fish in the Hatchery Information System." />
         <br />
         <p>
             This plugin is a mass lot number assignment/editor plugin. The idea is that several groups of fish can be selected at once, and they can all get the same lot number. If they have existing lot numbers, the user will be prompted before simply overwriting with the new number.
@@ -152,7 +154,7 @@
         </p>
         <br />
         <h3 id="MassDepthFlow">Mass Depth/Flow</h3>
-        <img src="../Images/Faucet.png" />
+        <img src="../Images/Faucet.png" alt="A faucet icon used for a plugin that allows for editing water depth and flow in a rearing unit." />
         <br />
         <p>
             Depth and flow are too intimately entwined to separate out. The reason for this integration is that the two go together to generate turnover, which is of interest to lots of hatcheries. One measure without the other makes no sense. This plugin allows the user to see either the depth, the flow, and the turnover for a single rearing unit, or to choose to see the depths or the flow or the turnover for a selection of rearing units. All are displayed as monthly graphs that resemble bar graphs. The reason for the bar graphs is that these are parameters that change only rarely in most hatcheries, so a line graph would pretty much always be a flat line. This pseudo bar graph lets the daily nature of the measures appear, while retaining the line appearance of continuity in a visually enhanced fashion.
@@ -165,7 +167,7 @@
         </p>
         <br />
         <h3 id="MassMagicFish">Mass Magic Fish</h3>
-        <img src="../Images/MagicWand.png" />
+        <img src="../Images/MagicWand.png" alt="An icon depicting a cartoonish magic wand, which is used by a plugin that allows the addition of fish to several rearing units at once." />
         <br />
         <p>
             The <a href="#MagicFish">Magic Fish</a> plugin was the first one written, as it was the only means to get fish into the hatchery, initially. Dragging the side stall icon to each raceway to add fish was reasonable, though not wonderful. Dragging the icon to each of potentially hundreds of trays was unbearable. Thus the mass magic fish plugin was created as a means to quickly enter numbers of fish into large numbers of trays.
@@ -175,7 +177,7 @@
         </p>
         <br />
         <h3 id="MortalityMassEntry">Mortality Mass Entry</h3>
-        <img src="../Images/FishGraveSmall.bmp" />
+        <img src="../Images/FishGraveSmall.bmp" alt="An icon depicting a cartoonish grave stone, which is used by a plugin that allows the viewing and editing of mortality information for a series of rearing units over time." />
         <br />
         <p>
             The plugin shows a grid with the rows being all selected rearing units (or all rearing units if none are selected), while the columns are the dates. The rows will be shown in the default sort order for the hatchery. Comments and mark-specific mortality can be entered using a pair of buttons in each cell. Any cell for a date and rearing unit that had no fish will be grayed out. Thus, it isn’t possible to enter mortality information if there are no fish.
@@ -185,21 +187,21 @@
         </p>
         <br />
         <h3 id="ProjectedReleaseSiteAndDate">Projected Release Site and Date</h3>
-        <img src="../Images/ProjectedReleaseColorsSmall.png" />
+        <img src="../Images/ProjectedReleaseColorsSmall.png" alt="An icon used for a plugin that allows the user to add or edit the expected release site for a group of fish." />
         <br />
         <p>
             This plugin probably has to change a bit, as it depends on some mapping code that isn’t necessarily available to everybody. The idea for the plugin is that a hatchery can indicate where, and possibly when, a group of fish will be released. This is largely done so that the IColorControl <a href="IColorControl.html#CCProjectedRelease">Release Prediction</a> plugin can be used to display how release groups are organized within the facility. Coloring the rearing units based on where the fish will end up, is a design I have seen employed at various hatcheries over the years, so this plugin allows the Hatchery Information System to replicate that. Managing the release sites is a bit problematic, as the best way to visualize release sites is using maps, and those tend to be proprietary.
         </p>
         <br />
         <h3>Return To Present</h3>
-        <img src="../Images/Left Arrow.bmp" />
+        <img src="../Images/Left Arrow.bmp" alt="An icon depicting an arrow, which is used by a plugin that brings the view back to the present time if the user had been looking at the hatchery at some past date." />
         <br />
         <p>
             The return to present plugin is part of the time travel group. It may have no utility at all if the time travel aspects are removed form the other plugins in the time travel group. The sole purpose of the plugin is to return the <a href="../index.html#CurrentView">Current Time View</a> to showing the current time after the time had been switched to show some other time using one of the time travel plugins. No time travel would mean no purpose for this plugin.
         </p>
         <br />
         <h3>RUB Sorter</h3>
-        <img src="../Images/OrderRU32x32.png" />
+        <img src="../Images/OrderRU32x32.png" alt="An icon used for a plugin that allows the user to set the sorting order in which rearing units will appear when more than one has been selected." />
         <br />
         <p>
             This plugin was created after showing the Hatchery Information System to the staff at one particular hatchery. They said that they always visit vats in order, but not in numerical order. Therefore, they wanted to be able to sort the rearing units into whichever order worked for them, and then have the rearing units retain the sort order they had indicated for future use.
@@ -215,7 +217,7 @@
         </p>
         <br />
         <h3 id="MassWeight">Weight Mass Entry</h3>
-        <img src="../Images/ScaleSmallTransparent.png" />
+        <img src="../Images/ScaleSmallTransparent.png" alt="An icon of a small, stylized, scale used for a plugin that allows for the entry of weight for a group of fish in a fish hatchery." />
         <br />
         <p>
             This plugin is closely related to the <a href="#MortalityMassEntry">Mortality Mass Entry</a> plugin. In fact, it was created in a few hours by copying the mortality plugin, further showing the utility of the plugin concept. All the functionality is identical, except that the button for mark specific data was omitted, as weight is not mark specific. The comment button is still there, as is the ability to drag copy. Frankly, nobody should use either comments or drag copy for weight, as neither one makes much sense, but the functionality is there if somebody wants to use it.
@@ -225,14 +227,14 @@
         </p>
         <br />
         <h3>Note Log</h3>
-        <img src="../Images/NoteLogClear.png" /><img src="../Images/NoteLogProblem.png" />
+        <img src="../Images/NoteLogClear.png" alt="An icon depicting a green gear with a letter superimposed over it. The icon is used for a plugin allowing the user to see any error notes raised by the Hatchery Information System." /><img src="../Images/NoteLogProblem.png" alt="An icon depicting a red gear with a letter superimposed over it, indicating trouble. The icon is used for a plugin allowing the user to see any error notes raised by the Hatchery Information System." />
         <br />
         <p>
             The note log plugin intercepts and records error notes raised from anywhere in the program. The icon is dynamic, as it flashes and changes appearance if an error is received. Clicking on the button brings up a grid showing all errors and information related to them. These will then be either cleared by the user, or saved to the DB along with a time stamp. The primary use of the plugin is for debugging, but it has a general interest, as it shows quite emphatically when something has gone wrong.
         </p>
         <br />
         <h3>Release</h3>
-        <img src="../Images/IsoTruck32x32.png">
+        <img src="../Images/IsoTruck32x32.png" alt="A small icon showing a cartoonish truck. This icon is used by a plugin allowing the user to enter a complex release scenario covering multiple rearing units.">
         <br />
         <p>
             The button bar release plugin is part of the release group, most of which are bottom stall options. This plugin allows for very nuanced, complicated releases involving multiple moves from multiple locations to multiple trucks, which are all part of the same overall release. In general, the bottom stall release options are easier to use, but more simplistic.
@@ -241,7 +243,7 @@
 
         <h2>Existing Side Stall Plugins</h2>
         <h3>Feed Projections</h3>
-        <img src="../Images/GrowthProjection.png" />
+        <img src="../Images/GrowthProjection.png" alt="An icon used by a plugin that allows the user to enter feed projections for the fish in a rearing unit." />
         <br />
         <p>
             The feed projections plugin was created because the first or second question I was asked by the staff of every hatchery that saw the early versions of the Hatchery Information System was, “can it do feed projections?” If that’s the first question, the answer had better be, “yes.” However, there are so many things that can be done with feed projections that this is only one possible answer. At least one other plugin would almost certainly be needed, as there are at least two common approaches to feed projection.
@@ -260,28 +262,28 @@
         </p>
         <br />
         <h3>Genetics Editor</h3>
-        <img src="../Images/GenAddEdit64.png" />
+        <img src="../Images/GenAddEdit64.png" alt="An icon used for a plugin that allows the editing of genetic information associated with the fish in a rearing unit." />
         <br />
         <p>
             The genetics editor plugin was created to fill a gap created by the Magic Fish plugin group. Those plugins could add fish with or without genetic information. This plugin allowed genetic information to be added or edited at a later date.
         </p>
         <br />
         <h3 id="LotEditor">Lot Editor</h3>
-        <img src="../Images/EditLot64.png" />
+        <img src="../Images/EditLot64.png" alt="An icon used for a plugin that allows the editing of the lot number for the fish in a specific rearing unit." />
         <br />
         <p>
             The plugin provides a means to see/edit the lot number for some location. The plugin is a finer tuned instrument than the <a href="#MassLotEditor">mass lot editor</a> plugin.
         </p>
         <br />
         <h3 id="MagicFish">Magic Fish</h3>
-        <img src="../Images/small 2cornacopiafish.bmp" style="height:64px;width:64px;" />
+        <img src="../Images/small 2cornacopiafish.bmp" style="height:64px;width:64px;" alt="An icon used for a plugin that allows for the addition of new fish to the fish model, or the creation of a whole new fish model." />
         <br />
         <p>
             The magic fish plugin, along with the <a href="#MassMagicFish">Mass Magic Fish</a> plugin, are the primary means to adding fish to the hatchery. There are many different plugins that could be created, this is just one of them. In this plugin, there must be a species, stock, and brood year along with a number. There can also be genetic information, lot information, and an arbitrary trait called a pseudo-stock.
         </p>
         <br />
         <h3>Mark Quality</h3>
-        <img src="../Images/MarkCheck64.png">
+        <img src="../Images/MarkCheck64.png" alt="An icon used for a plugin that allows the user to enter mark quality information for a group of fish in a rearing unit.">
         <br />
         <p>
             When dropped on a location, this plugin allows the user to enter or edit the mark quality information for some mark. Of course, if the fish don’t have any marks, the plugin simply objects. Mark quality is a total number of fish, a number good, a number bad, and a number partial if that applies to the mark in question. Partial mark quality may or may not be desirable information for some hatchery operations, as partial marks may or may not be distinguishable at a later date. The option to enter partial marks is included for completeness.
@@ -291,7 +293,7 @@
         </p>
         <br />
         <h3>Multi Characteristic Editor</h3>
-        <img src="../Images/EditFishInfo.png" />
+        <img src="../Images/EditFishInfo.png" alt="An icon used for a plugin that allows the user to edit a series of different traits for the fish in a single rearing unit." />
         <br />
         <p>
             The multi characteristics editor was created to fill a gap created by the Magic Fish plugin group. Those plugins could add fish with fixed stock, species and brood year. This plugin was added to allow for editing that information after the fact,  while also adding other traits that are largely anonymous. Essentially, the anonymous traits are a way to add some arbitrary label to a group of fish.
@@ -301,7 +303,7 @@
         </p>
         <br />
         <h3>Projected Release Manager</h3>
-        <img src="../Images/ProjectedReleaseColors.png" />
+        <img src="../Images/ProjectedReleaseColors.png" alt="An icon used for a plugin that allows the user to alter projected release locations for some fish in a single rearing unit." />
         <br />
         <p>
             A side stall version of the <a href="#ProjectedReleaseSiteAndDate">Projected Release and Date</a> plugin. The side stall version is easier to use for assignments to individual rearing units, but not as good for assignments to large numbers of rearing units.
@@ -311,21 +313,21 @@
         </p>
         <br />
         <h3>RU Renamer</h3>
-        <img src="../Images/RUName.png" />
+        <img src="../Images/RUName.png" alt="An icon used for a plugin that allows the user to provide a custom name for a rearing unit." />
         <br />
         <p>
             All rearing units are given names automatically, often based on <a href="RUBOModel.html#Keyways">keyways</a> or the base name of the structure. The automatic names can be made to be right over 90% of the time, but there will be times when a different name will be desired. This plugin allows the user to assign a specific name to a specific rearing unit. Any name assigned using this plugin will be visible to anybody who views the data, which means that the name will be retained through exports and transfers, as well as being available to all instances of the Hatchery Information System at any one hatchery.
         </p>
         <br />
         <h3>Trait Explorer</h3>
-        <img src="../Images/TraitEx64.png">
+        <img src="../Images/TraitEx64.png" alt="An icon used for a plugin that allows the user to see the number of fish with any selected set of traits in the designated location.">
         <br />
         <p>
             When dropped on a location containing fish, the plugin will allow the user to choose some set of one or more traits and show the number of fish in that location with those traits. The user can add and remove traits to see various numbers for the move or location in question. The plugin must be dropped on a location containing fish, as it is meaningless if there are no fish. However, when dropped on a proper location, there will be a slider allowing the user to see the traits at different times while the fish were in the location.
         </p>
         <br />
         <h3>Weight</h3>
-        <img src="../Images/Scale.bmp" style="height:64px;width:64px;" />
+        <img src="../Images/Scale.bmp" style="height:64px;width:64px;" alt="An icon used for a plugin that can be used to enter the weight of a group of fish in a specific location." />
         <br />
         <p>
             When dropped on a location containing fish, a form pops up for the user to enter the weight into. The plugin responds to the weight units set for the Hatchery Information System, and will show a ghost number of what the <a href="GrowthCoreModel.html">Growth Core</a> expects the weight to be, in those units. Therefore, if the user is about to enter a number that is radically different from what is shown, they’ll have some warning that they are either entering weight in the wrong units, or that something else might be wrong with the value.
@@ -340,7 +342,7 @@
 
         <h2>Existing Bottom Stall Plugins</h2>
         <h3>Mortality</h3>
-        <img src="../Images/FishGraveLarge.bmp" style="height:64px;width:128px;" />
+        <img src="../Images/FishGraveLarge.bmp" style="height:64px;width:128px;" alt="An icon depicting a graveyard for fish, which is used by a plugin that allows the user to enter a single mortality event from a rearing unit." />
         <br />
         <p>
             The original idea behind the Hatchery Information System was that everything could be done via drag and drop. Thus, mortality can be entered by dragging fish from a rearing unit to this bottom stall plugin, at which point a box pops up for entering the number. This works nicely for one or two rearing units, but would become terribly tedious for lots of rearing units, hence the <a href="#MortalityMassEntry">button bar mortality</a> plugin.
@@ -358,7 +360,7 @@
         </p>
         <br />
         <h3>Transport Release</h3>
-        <img src="../Images/IsoTruck.png">
+        <img src="../Images/IsoTruck.png" alt="An icon showing a cartoonish truck used for a plugin that allows entering a release involving transportation of various kinds from a rearing unit.">
         <br />
         <p>
             While the icon is a truck, this release plugin allows for release by truck, pack, airplane, helicopter, boat, mixed, and other. Fish can be released by pounds of fish or numbers of fish, and a series of other traits can be tracked, including a few temperature measures, location, date ranges, and some transportation statistics.
@@ -368,7 +370,7 @@
         </p>
         <br />
         <h3>Volitional Release</h3>
-        <img src="../Images/ReleaseIII.png">
+        <img src="../Images/ReleaseIII.png" alt="An icon showing fish emerging from a pipe, which is used for a plugin that allows the entering of data related to the volitional release from a rearing unit.">
         <br />
         <p>
             The volitional release plugin is a variant on the transport release plugin. They are pretty similar, except that volitional releases will always have a date range, will never have a transport method, and are also lacking most of the other transportation statistics.
@@ -377,14 +379,14 @@
 
         <h2>Existing Raceway Icon Plugins</h2>
         <h3>Depth / Flow</h3>
-        <img src="../Images/Faucet.png" />
+        <img src="../Images/Faucet.png" alt="A cartoon image of a faucet used as an icon for a plugin that allows the user to see and alter the water depth and flow for a single rearing unit." />
         <br />
         <p>
             This plugin is a raceway variation on the <a href="#MassDepthFlow">button bar depth/flow</a> plugin. Since it is a raceway icon plugin, it will only show the depth, flow, and turnover for the rearing unit which was clicked on. The plugin does allow entering and editing of values, as it is the same essential form as the button bar plugin.
         </p>
         <br />
         <h3 id="EggInfoOne">Egg Info One</h3>
-        <img src="../Images/EggInfo32.png">
+        <img src="../Images/EggInfo32.png" alt="An icon used for a plugin that allows the user to see some information about numbers and certain traits for fish eggs.">
         <br />
         <p>
             A simple reporting plugin that shows the species, stock, brood year, and what’s called a virtual stock (also called a pseudo stock) with the marks found on the eggs. The form has at least that one tab, but may well include other tabs, with different tabs for different stocks.
@@ -394,7 +396,7 @@
         </p>
         <br />
         <h3 id="RWPBEvents">Event Viewer</h3>
-        <img src="../Images/RotationCircle.png" style="height:64px;width:64px;" />
+        <img src="../Images/RotationCircle.png" style="height:64px;width:64px;" alt="An icon showing a circle, which is used for a plugin that allows the user to see the events that impacted a rearing unit over time." />
         <br />
         <p>
             The event viewer is part of the time travel group. The original idea behind the time travel plugins was to allow the <a href="../index.html#CurrentView">Current Time View</a> to show the state of the hatchery at different times.  The only reasonable times to view were just before, or just after, certain events such as moves, as those were the only times when the display might materially change. Of course, since mortality events are moves, there could be any number of these. Ultimately, though, the time travel concept was not such a good idea. After all, the Current Time View could only show one point in time, whereas the <a href="../index.html#MoveWebView">Move Web View</a> could show a range of time, so once the Move Web View was created, the time travel aspect of this plugin no longer made sense. Still, the time travel plugins had a real value, as they showed events in order, with a means to show/hide different types of events. This allowed an easy means to see relevant actions in order. Thus the plugins remain, even if the time travel part might as well be removed.
@@ -404,21 +406,21 @@
         </p>
         <br />
         <h3 id="RWPBFeed">Feed</h3>
-        <img src="../Images/FeedBucket.png" />
+        <img src="../Images/FeedBucket.png" alt="An cartoon representation of a bucket of feed, which is used by a plugin to allow the user to see the feed amounts for a specific rearing unit over time." />
         <br />
         <p>
             The main point of this plugin is to show feed over time for a group of fish in a rearing unit. The display is a bar graph, with one bar per day, and scrolling dates is possible. Editing the feed amounts can also be done by double clicking on one of the bars in the graph. The plugin will show feed with single types, multiple types, medicated, and non-medicated, all on the same graph.
         </p>
         <br />
         <h3>Genetic Information</h3>
-        <img src="../Images/FatRYGenetics.png" />
+        <img src="../Images/FatRYGenetics.png" alt="An icon depicting a cartoonish DNA strand, which is used for a plugin allowing the user to see genetic information about the fish in a rearing unit." />
         <br />
         <p>
             This plugin was an early plugin created to show the utility of the trait component of the <a href="FBOModel.html#MoveWeb">Move Web</a> by showing where a group of offspring ended up in the hatchery. What the plugin shows is the parental groups found in the current location along with the numbers of each group. There are also tabs for the male and female parents, if that information is available. Whether or not that information is available depends entirely on what genetic information is entered.
         </p>
         <br />
         <h3>Growth Graphics</h3>
-        <img src="../Images/GrowthCurve.png">
+        <img src="../Images/GrowthCurve.png" alt="An icon depicting a logarithmic graph, which is used for a plugin allowing the user to see the size of fish over time in a rearing unit.">
         <br />
         <p>
             This plugin is only available for locations that include fish, never for eggs. The plugin shows the growth of the fish over time in the location in question. Significant points along the curve are indicated by icons, such as measurements, estimated values, and changes in the intended growth due to changes in feed. The curve also projects the growth into the future, though not very far into the futur
@@ -428,7 +430,7 @@
         </p>
         <br />
         <h3 id="MarkReportOne">Mark Report One</h3>
-        <img src="../Images/MarkSmallImage.bmp">
+        <img src="../Images/MarkSmallImage.bmp" alt="An icon used for a plugin that shows the numbers of each mark found on the fish in a rearing unit.">
         <br />
         <p>
             A simple reporting plugin that shows the species, stock, brood year, and what’s called a virtual stock (also called a pseudo stock) with the marks found on the fish. The form has at least that one tab, but may well include other tabs, with different tabs for different stocks. Each tab will show a breakdown of the marks on that stock, in the case of mixed stock rearing units.
@@ -440,21 +442,21 @@
 
         <h2>Existing Menu Only Plugins</h2>
         <h3 id="ComMonitor">Communication Monitor</h3>
-        <img src="../Images/ComIconSmall.png">
+        <img src="../Images/ComIconSmall.png" alt="An icon used for a plugin that offers up some obscure information about the communication system used by the Hatchery Information System.">
         <br />
         <p>
             This plugin was largely created because I could. It shows the versatility of the plugin system, though it likely does little of interest to people. The plugin was mostly intended to help with diagnosing any communication issues with the <a href="CommunicationModel.html">Communication</a> model. The form that pops up shows things like how many instances of the Hatchery Information System are active, what the last message was, who is the godfather, and things like that. There is also the ability to take over the Godfather role for the current instance, though since the role is usually automatic, taking over the role is mostly just for testing.
         </p>
         <br />
         <h3>Communication Tester</h3>
-        <img src="../Images/ComCheck.png">
+        <img src="../Images/ComCheck.png" alt="An icon used for a plugin that helps to diagnose network issues in a LAN at a fish hatchery.">
         <br />
         <p>
             Similar to the <a href="#ComMonitor">Communication Monitor</a>, this plugin was created to help with diagnosing communication issues. The tests may not be all that useful, either, as they attempt to flood the system with lots of UDP messages and track how many get lost. The plugin might show a noisy system, but might also show nothing at all.
         </p>
         <br />
         <h3>Condition Factor View</h3>
-        <img src="../Images/CFIcon32.png">
+        <img src="../Images/CFIcon32.png" alt="An icon used for a plugin that allows the user to see some information on the condition factor of fish over time.">
         <br />
         <p>
             This plugin is part of the test harness group and is not intended for production, though the concept might have value beyond testing. The idea is to show what condition factor value is used for certain times. To make it more useful, it would be more reasonable to make this a side stall plugin, but condition factors, as shown in this plugin, are some internal data used by the <a href="GrowthCoreModel.html">Growth Core</a> model. I haven’t figured out what should be shown to a wider audience in a more useful fashion.
@@ -469,7 +471,7 @@
         </p>
         <br />
         <h3 id="SQLDisplay">SQL Display</h3>
-        <img src="../Images/TMUnselected.png">
+        <img src="../Images/TMUnselected.png" alt="An icon used for a plugin which is only intended for testing.">
         <br />
         <p>
             The SQL Display plugin is part of the test harness group, and is not intended for production. The plugin works with the <a href="#SQLInterceptor">SQL Interceptor</a> plugin, as it shows results, whereas the SQL Interceptor only gathers data. This plugin is only useful for some very specific testing.

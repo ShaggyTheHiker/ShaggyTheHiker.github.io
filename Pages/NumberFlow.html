@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/General.css" />
+    <title>The flow of numbers of fish through a fish hatchery.</title>
+    <meta name="description" content="Fish hatchery data managment tends to revolve around the flow of fish through the fish hatchery. This is a complicated subject, as the numbers are rarely counted and generally have wide error bars around them. As new information is obtained, old information needs to be updated. This model handles all of the uncertainty in the best way possible, with no user interaction required." />
 </head>
 <body>
     <!-- This may not be necessary -->
@@ -194,7 +196,7 @@
             Consider a vat (Vat A) that has 20,000 fish in it that is then split out to two different vats (Vats B and C), each receiving half the fish.
         </p>
 
-        <img src="../Images/VatSplitToTwoVats.png">
+        <img src="../Images/VatSplitToTwoVats.png" alt="A stylized representation of the fish from a vat being split out to two different vats.">
         <br />
         <br />
 
@@ -205,7 +207,7 @@
             Next, imagine that the fish from Vat B are moved into a fish marking trailer, and when all the fish are marked, the highly accurate machine count shows that 11,000 fish were marked out to the raceway.
         </p>
 
-        <img src="../Images/VatSplitOneToFMTToRWY.png">
+        <img src="../Images/VatSplitOneToFMTToRWY.png" alt="A stylized representation of the fish from a vat being split to two different vats. The fish from one vat then goes into a fish marking trailer and out to a raceway.">
         <br />
         <br />
 
@@ -219,7 +221,7 @@
             The best answer is that the moves to Vat B and C were not all that accurate, and that 11,000 were moved to Vat B, with only 9,000 having been moved to Vat C.
         </p>
 
-        <img src="../Images/AdjustedVatSplitToFMTToRwy.png">
+        <img src="../Images/AdjustedVatSplitToFMTToRwy.png" alt="A representation of how marking the fish from a vat alters the understanding of the numbers of fish in the whole system, not including incubation trays.">
         <br />
         <br />
 
@@ -242,7 +244,7 @@
             When Vat A gets the request for 1,000 fish, it has several options.
         </p>
 
-        <img src="../Images/AdjustedFullMWOneFMT.png">
+        <img src="../Images/AdjustedFullMWOneFMT.png" alt="A representation of how marking the fish from a vat alters the understanding of the numbers of fish in the whole system, including incubation trays.">
         <br />
         <br />
 
@@ -253,7 +255,7 @@
             When Vat C gets the request, it has 10,000 fish in it. The vat can easily spare 1,000, so it adjusts it’s number down to 9,000 and relinquishes the extra 1,000.
         </p>
 
-        <img src="../Images/FlowWithOneFMTOneAdjustment.png">
+        <img src="../Images/FlowWithOneFMTOneAdjustment.png" alt="A representation of how the information gained by marking the fish from a vat flows back through other rearing units in the system.">
         <br />
         <br />
 
@@ -272,7 +274,7 @@
             Now, consider what happens if Vat C is also moved into a fish marking trailer, and when the fish are marked out, the count is found to be 10,000.
         </p>
 
-        <img src="../Images/SecondMarkingNoAdjustment.png">
+        <img src="../Images/SecondMarkingNoAdjustment.png" alt="A representation of marking the fish out of a second vat once the first vat has already been marked.">
         <br />
         <br />
 
@@ -289,7 +291,7 @@
             So, when Vat C requests an extra 1,000 fish of Vat A, Vat A knows it can’t push the request onto Vat B, so the only remaining option is to ask more fish of the moves in. This will change the 20,000 number, but at this point, we know it must change. There were 21,000 fish taken out of the vat, so there must have been 21,000 fish in the vat. Vat A takes the 1,000 fish request and divides it up for the four moves in. If each is 5,000 fish, then each is asked to supply an extra 200 fish. In the Move Web shown, those moves in are <a href="FBOModel.html#MoveFromNowhere">moves from nowhere</a>. Moves from nowhere can supply any number of fish, because the number is just a count, and the reliability of that count can’t be known. Therefore, the moves increase by 250 fish each, and all is well. Of course, those moves add an adjustment of 250. That means that, to get the original count, it is only necessary to add the adjustment number to the move number.
         </p>
 
-        <img src="../Images/SecondMarkingFinalMapPreEdit.png">
+        <img src="../Images/SecondMarkingFinalMapPreEdit.png" alt="A representation of how marking the fish out of a second vat alters the numbers throughout the whole system.">
         <br />
         <br />
 
@@ -311,7 +313,7 @@
             Vat A now has to decide what to do with the request. It could look at all of the moves in and out, just as it did with the earlier request of 1,000 fish, but there is something else to consider at this point. All the moves have adjustments. The move to Vat B is type K and can’t accept any adjustments from the upstream end, but it also has an adjustment of -1000. In other words, it would prefer to lose fish to move closer to it’s original number, not gain fish and move further away. In this case, the move is type K, and can’t do either one, but this request would not be desirable. On the other hand, the four moves in all have adjustments of -250 fish (adding -250 to their number of 5,250 would return to the original count of 5,000). If the request is pushed to them, they move back closer to the original count. Moving back towards the original count is always better, as it means that the Move Web is making better use of the information it has. Therefore, even if there were moves out that could take the request, the fact that the four moves in would really like to be reduced, means that those moves should get this request. The request is then divided proportionally to each of the four, which means that each goes to 5,150. The adjustment also gets 100 added to it, so the adjustment goes from -250 to -150. Once again, adding the adjustment back in will return the original count.
         </p>
 
-        <img src="../Images/PostEditFinalMap.png">
+        <img src="../Images/PostEditFinalMap.png" alt="A representation of how editing the numbers of fish marked out of one vat alters the numbers throughout the whole system.">
         <br />
         <br />
 

@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/General.css" />
+    <title>The fish model, which manages how fish move through a fish hatchery in the Hatchery Information System.</title>
+    <meta name="description" content="The fish model handles the time fish spend in rearing units, how they got there and where they went. This model provides an unusually convenient means to organize and extend data management in fish hatchery record keeping." />
 </head>
 <body>
     <!-- This may not be necessary -->
@@ -99,7 +101,7 @@
             A move web usually starts when eggs are moved into a location. At that point, the move web consists of a single move and a single location.
         </p>
 
-        <img src="../Images/CreationMove.png">
+        <img src="../Images/CreationMove.png" alt="A detail showing the movement of fish into a graphical representation of a rearing unit from an unknown source represented by a cloud.">
         <br />
         <br />
 
@@ -111,7 +113,7 @@
             Any hatchery that receives eggs will start out with numerous, simple, move webs like the one shown. Eventually, the eggs will either be consolidated with other eggs, or will hatch and be mixed with other fry in some other rearing unit. When this happens, the multiple early move webs all merge into a single move web.
         </p>
 
-        <img src="../Images/CreationToTrayToVat.png">
+        <img src="../Images/CreationToTrayToVat.png" alt="A detail showing the movement of fish into a graphical representation of a rearing unit from an unknown source represented by a cloud. The fish are then moved from the original rearing unit into a second rearing unit. This represents the movement of fish through the model.">
         <br />
         <br />
 
@@ -122,8 +124,8 @@
             Eventually, fish will move out of the move web. Moves out of the move web are called moves to nowhere.
         </p>
 
-        <img src="../Images/NonTerminalMoveToNowhere.png">
-        <img src="../Images/TerminalMoveToNowhere.png">
+        <img src="../Images/NonTerminalMoveToNowhere.png" alt="A graphical representation of releasing fish from a rearing unit at a fish hatchery where fish still remain in the rearing unit afterwards.">
+        <img src="../Images/TerminalMoveToNowhere.png" alt="A graphical representation of releasing all remaining fish from a rearing unit at a fish hatchery.">
         <br />
         <br />
 
@@ -158,7 +160,7 @@
             Consider the case where there are some trout in a vat. If, over the course of time, those trout get split out into two raceways for final rearing, they remain trout.
         </p>
 
-        <img src="../Images/VatyToTwoRaceways.png">
+        <img src="../Images/VatyToTwoRaceways.png" alt="A graphical representation of moving fish from one rearing unit into two different rearing units.">
         <br />
         <br />
 
@@ -166,7 +168,7 @@
             If the hatchery manager notices that the fish in one of those raceway are not trout, but are actually burbot, then something is wrong. The fish didn’t change species, so a mistake was made, but where was it made? The mistake wasn’t made in the raceway where it was discovered. If the fish are now burbot, then they were burbot when they were in the vat, which means that the fish in the other raceway had better be burbot.
         </p>
 
-        <img src="../Images/VatyToTwoRacewaysTroutToBurbot.png">
+        <img src="../Images/VatyToTwoRacewaysTroutToBurbot.png" alt="A graphical representation of how data flows along with fish from one rearing unit to two different rearing units. The depiction is of burbot being mistaken to be trout.">
         <br />
         <br />
 
@@ -174,7 +176,7 @@
             The mistake wasn’t made in the vat, either. The fish didn’t become burbot in the vat. They were burbot when they were moved in. Suppose they came from a series of trays, as shown here:
         </p>
 
-        <img src="../Images/WholeMW.png">
+        <img src="../Images/WholeMW.png" alt="A graphical representation of where in the sequence of events the species gets assigned to fish in a fish hatchery, and how that assignment stays with the fish as they move through the system. ">
         <br />
         <br />
 
@@ -195,7 +197,7 @@
             What may surprise people is that the traits also flow upstream from the move of origin. Consider a group of fish that are released from a raceway into some stream. Those fish now have a release site trait (and possibly several other release related traits). Any fish that were moved into the raceway prior to that release could be part of that release.
         </p>
 
-        <img src="../Images/VatToRacewayToRelease.png">
+        <img src="../Images/VatToRacewayToRelease.png" alt="A graphical representation of fish being released from a fish hatchery rearing unit. The graphic shows that while the release happens at a later date, the fish in the rearing unit that will participate in the release can be said to have the given release site as a trait.">
         <br />
         <br />
 
@@ -206,7 +208,7 @@
             By managing traits in this way, it is possible to ask what traits are, or will eventually be added, on any group of fish in either moves or assemblages, and get the estimated number of fish with any set of traits. The Move Web View in Hatchery Information System shows this in the tool tips, which can be changed to show whatever information is desired.
         </p>
 
-        <img src="../Images/TooltipText1.png">
+        <img src="../Images/TooltipText1.png" alt="A graphical detail showing the information that can be shown for the fish in a rearing unit of a fish hatchery.">
         <br />
         <br />
 
@@ -225,7 +227,7 @@
             So, what is a single move with neither source nor destination? It is a stocking record. Many organizations will have stocking records from before they were tracking data about the rearing cycle in the hatchery. All stocking records are move webs, and can be managed in the Hatchery Information System design. They look like this
         </p>
 
-        <img src="../Images/CMR.png">
+        <img src="../Images/CMR.png" alt="A graphical representation of a stocking record for a fish hatchery where no information about where the fish came from was available.">
         <br />
         <br />
 

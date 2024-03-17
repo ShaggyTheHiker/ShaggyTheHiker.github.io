@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/General.css" />
+    <title>The IMoveWebSupplemental Interface of the Hatchery Information System</title>
+    <meta name="description" content="A supplemental interface that adds additional functionality for plugins used in the Move Web View of the Hatchery Information System." />
 </head>
 <body>
     <!-- This may not be necessary -->
@@ -99,7 +101,7 @@
 
         <h2>Existing Button Bar Plugins</h2>
         <h3>Genetic Information</h3>
-        <img src="../Images/GeneticsFatLine.png" />
+        <img src="../Images/GeneticsFatLine.png" alt="An icon depicting a caroonish DNA strand used for a plugin that shows genetic information for a rearing unit." />
         <br />
         <p>
             This plugin shows three different things, so the user must first choose what it is they want to look at. The first option is to show the genetic information for all fish currently on station. The second option is to show the genetic disposition for some species and brood year. The third option is to show the disposition for one genetic ID or parent ID.
@@ -109,7 +111,7 @@
         </p>
         <br />
         <h3>Line Diagnostics</h3>
-        <img src="../Images/LineWithWrench.png" />
+        <img src="../Images/LineWithWrench.png" alt="An icon used for a diagnostic plugin for the Hatchery Information System." />
         <br />
         <p>
             The diagnostics plugins are not expected to be of any use to anybody. They were added to help diagnose errors while building the <a href="../index.html#MoveWebView">Move Web View</a>, but since they were built as full fledged plugins, there was no reason to remove them.
@@ -119,7 +121,7 @@
         </p>
         <br />
         <h3>Location Diagnostics</h3>
-        <img src="../Images/LocationDiagnostic.png" />
+        <img src="../Images/LocationDiagnostic.png" alt="An icon used for a diagnostic plugin for the Hatchery Information System." />
         <br />
         <p>
             The diagnostics plugins are not expected to be of any use to anybody. They were added to help diagnose errors while building the <a href="../index.html#MoveWebView">Move Web View</a>, but since they were built as full fledged plugins, there was no reason to remove them.
@@ -129,55 +131,55 @@
         </p>
         <br />
         <h3 id="MWVMassLotEditor">Lot Editor</h3>
-        <img src="../Images/Lot.png" />
+        <img src="../Images/Lot.png" alt="An icon used for a plugin that allows for editing the lot numbers of fish in the Hatchery Information System." />
         <br />
         <p>
             This plugin is a mass lot number assignment/editor plugin. The idea is that several groups of fish can be selected at once, and they can all get the same lot number. If they have existing lot numbers, the user will be prompted before simply overwriting with the new number.
         </p>
         <br />
         <h3 id="MWVMassDepthFlow">Mass Depth/Flow</h3>
-        <img src="../Images/Faucet.png" />
+        <img src="../Images/Faucet.png" alt="A faucet icon used for a plugin that allows for editing water depth and flow in a rearing unit." />
         <br />
         <p>
             This plugin is the same object as the IHISGeneral <a href="IHISGeneral.html#MassDepthFlow">Mass Depth/Flow</a> plugin and the IColorControl <a href="IColorControl.html#CCMaxDepthFlow">Percent Max Depth/Flow</a> plugin. It is used for viewing, entering, and editing the depth, flow, and turnover for one or more rearing units.
         </p>
         <br />
         <h3>Merge MW</h3>
-        <img src="../Images/Scissors.png" />
+        <img src="../Images/Scissors.png" alt="An icon of a pair of scissors used for a plugin that allows merging of groups of fish. " />
         <br />
         <p>
             The Move Web View displays a single Move Web. The view also allows new moves to be added by dragging from one location to another, or edited by dragging the destination of an existing move. But what happens if the new destination is a part of some other Move Web? The view only shows a single Move Web, so dragging to some other Move Web isn’t possible without some help. The purpose of this plugin is to bring in other Move Webs to share the screen with an existing Move Web. This can get busy, but it does mean that two Move Webs can be shown by the view at the same time such that moves that connect them can be added.
         </p>
         <br />
         <h3>Note Log</h3>
-        <img src="../Images/NoteLogClear.png" /><img src="../Images/NoteLogProblem.png" />
+        <img src="../Images/NoteLogClear.png" alt="An icon depicting a green gear with a letter superimposed over it. The icon is used for a plugin allowing the user to see any error notes raised by the Hatchery Information System." /><img src="../Images/NoteLogProblem.png" alt="An icon depicting a red gear with a letter superimposed over it, indicating trouble. The icon is used for a plugin allowing the user to see any error notes raised by the Hatchery Information System." />
         <br />
         <p>
             The note log plugin intercepts and records error notes raised from anywhere in the program. The icon is dynamic, as it flashes and changes appearance if an error is received. Clicking on the button brings up a grid showing all errors and information related to them. These will then be either cleared by the user, or saved to the DB along with a time stamp. The primary use of the plugin is for debugging, but it has a general interest, as it shows quite emphatically when something has gone wrong.
         </p>
         <br />
         <h3 id="MWVProjectedRelease">Projected Release Site and Date</h3>
-        <img src="../Images/ProjectedReleaseColorsSmall.png" />
+        <img src="../Images/ProjectedReleaseColorsSmall.png" alt="An icon used for a plugin that allows the user to add or edit the expected release site for a group of fish." />
         <br />
         <p>
             This plugin probably has to change a bit, as it depends on some mapping code that isn’t necessarily available to everybody. The idea for the plugin is that a hatchery can indicate where, and possibly when, a group of fish will be released. This is largely done so that the IColorControl <a href="IColorControl.html#CCProjectedRelease">Release Prediction</a> plugin can be used to display how release groups are organized within the facility. Coloring the rearing units based on where the fish will end up, is a design I have seen employed at various hatcheries over the years, so this plugin allows the Hatchery Information System to replicate that. Managing the release sites is a bit problematic, as the best way to visualize release sites is using maps, and those tend to be somewhat proprietary.
         </p>
         <br />
         <h3>Trait Hunter</h3>
-        <img src="../Images/TraitIlluminate.png" />
+        <img src="../Images/TraitIlluminate.png" alt="An icon used for a plugin that allows the illumination of some set of traits, such as species, stock, or genetics found on fish in a fish hatchery." />
         <br />
         <p>
             The Trait Hunter plugin allows the user to choose one or more traits, at which point all moves that include those traits are colored to indicate whether the trait is present, projected, or partially projected. The latter category is when there are multiple traits, of which some are projected and some are not. A projected trait is one that the fish will eventually get, but have not yet gotten at the time of the move in question.
         </p>
         <h3>Trait Information</h3>
-        <img src="../Images/TraitInfo.png" />
+        <img src="../Images/TraitInfo.png" alt="An icon used for a plugin that allows displaying the traits, such as species, stock, or genetics found on fish in a fish hatchery." />
         <br />
         <p>
             Another plugin that shows the versatility of the Hatchery Information System plugin system, this plugin is how the information in the tooltips are set up for the Move Web View. The user can select the trait categories they want displayed in the tooltip, and set the order for them. Choices can be retained, too, so it changes future displays.
         </p>
         <br />
         <h3 id="MWVMassWeight">Weight Mass Entry</h3>
-        <img src="../Images/ScaleSmallTransparent.png" />
+        <img src="../Images/ScaleSmallTransparent.png" alt="An icon of a small, stylized, scale used for a plugin that allows for the entry of weight for a group of fish in a fish hatchery." />
         <br />
         <p>
             This plugin is closely related to the <a href="#MortalityMassEntry">Mortality Mass Entry</a> plugin. In fact, it was created in a few hours by copying the mortality plugin, further showing the utility of the plugin concept. All the functionality is identical, except that the button for mark specific data was omitted, as weight is not mark specific. The comment button is still there, as is the ability to drag copy. Frankly, nobody should use either comments or drag copy for weight, as neither one makes much sense, but the functionality is there if somebody wants to use it.
@@ -189,21 +191,21 @@
 
         <h2>Existing Side Stall Plugins</h2>
         <h3>Genetics Editor</h3>
-        <img src="../Images/GenAddEdit64.png" />
+        <img src="../Images/GenAddEdit64.png" alt="An icon used for a plugin that allows the editing of genetic information associated with the fish in a rearing unit." />
         <br />
         <p>
             The genetics editor plugin was created to fill a gap created by the Magic Fish plugin group. Those plugins could add fish with or without genetic information. This plugin allowed genetic information to be added or edited at later date.
         </p>
         <br />
         <h3>Lot Editor</h3>
-        <img src="../Images/EditLot64.png" />
+        <img src="../Images/EditLot64.png" alt="An icon used for a plugin that allows the editing of the lot number for the fish in a specific rearing unit." />
         <br />
         <p>
             The plugin provides a means to see/edit the lot number for some location or move. The plugin is a finer tuned instrument than the <a href="#MWVMassLotEditor">mass lot editor</a> plugin, and can work on moves rather than just rearing units.
         </p>
         <br />
         <h3>Magic Fish</h3>
-        <img src="../Images/small 2cornacopiafish.bmp" style="height:64px;width:64px;" />
+        <img src="../Images/small 2cornacopiafish.bmp" style="height:64px;width:64px;" alt="An icon used for a plugin that allows for the addition of new fish to the fish model, or the creation of a whole new fish model." />
         <br />
         <p>
             The Move Web View Magic Fish plugin is closely related to the Current Time View <a href="IHISGeneral.html#MagicFish">Magic Fish</a> plugin, but there are just a few differences. The major difference is that the Move Web View Magic Fish plugin can be dropped on existing rearing units, nowhere, and some bottom stall icons. If dropped on an existing rearing unit, the plugin behaves the same as the Current Time View plugin, as fish are added to that location. Dropping on nowhere allows the user to select the location. If the new location is empty, this will create a new <a href="FBOModel.html#MoveWeb">Move Web</a> including the new location and this new move into it. If the drop is on either a <a href="#MWVRelease">release</a> or <a href="#MWVTransferOut">transfer out</a> bottom stall icon, then this creates what is known as a <a href="FBOModel.html#CMRorCMT">CMR or CMT Move Web</a>, which is essentially just a stocking record.
@@ -213,7 +215,7 @@
         </p>
         <br />
         <h3>Mark Quality</h3>
-        <img src="../Images/MarkCheck64.png">
+        <img src="../Images/MarkCheck64.png" alt="An icon used for a plugin that allows the user to enter mark quality information for a group of fish in a rearing unit.">
         <br />
         <p>
             When dropped on a location, this plugin allows the user to enter or edit the mark quality information for some mark. Of course, if the fish don’t have any marks, the plugin simply objects. Mark quality is a total number of fish, a number good, a number bad, and a number partial if that applies to the mark in question. Partial mark quality may or may not be desirable information for some hatchery operations, as partial marks may or may not be distinguishable at a later date. The option to enter partial marks is included for completeness.
@@ -223,14 +225,14 @@
         </p>
         <br />
         <h3>Move Killer</h3>
-        <img src="../Images/Bomb.png">
+        <img src="../Images/Bomb.png" alt="An icon of a cartoonish bomb, which is used for a plugin that can be used to delete a move from the fish model.">
         <br />
         <p>
             The <a href="../index.html#MoveWebView">Move Web View</a> allows viewing and editing moves, while this plugin extends that to allow for deleting moves. The user drops a bomb on a move. There are some checks, to make sure they are doing what they intend to, and killing off a move is only done if no other plugin or model objects to the deletion. It must be possible, after all.
         </p>
         <br />
         <h3>Multi Characteristic Editor</h3>
-        <img src="../Images/EditFishInfo.png" />
+        <img src="../Images/EditFishInfo.png" alt="An icon used for a plugin that allows the user to edit a series of different traits for the fish in a single rearing unit." />
         <br />
         <p>
             The multi characteristics editor was created to fill a gap created by the Magic Fish plugin group. Those plugins could add fish with fixed stock, species and brood year. This plugin was added to allow for editing that information after the fact,  while also adding other traits that are largely anonymous. Essentially, the anonymous traits are a way to add some arbitrary label to a group of fish.
@@ -240,28 +242,28 @@
         </p>
         <br />
         <h3>Projected Release Manager</h3>
-        <img src="../Images/ProjectedReleaseColors.png" />
+        <img src="../Images/ProjectedReleaseColors.png" alt="An icon used for a plugin that allows the user to alter projected release locations for some fish in a single rearing unit." />
         <br />
         <p>
             A side stall version of the <a href="#MWVProjectedRelease">Projected Release and Date</a> plugin. The side stall version is easier to use for assignments to individual rearing units, but not as good for assignments to large numbers of rearing units.
         </p>
         <br />
         <h3>Release Editor</h3>
-        <img src="../Images/ReleaseEditor.png">
+        <img src="../Images/ReleaseEditor.png" alt="An icon used for a plugin that allows the user to edit release information associated with a group of fish.">
         <br />
         <p>
             The release editor is part of the release group of plugins. This plugin only makes sense in the Move Web View because it can only be dropped on release moves, which only exist in the Move Web View. The plugin allows the user to edit the traits and values in an existing release.
         </p>
         <br />
         <h3>Trait Explorer</h3>
-        <img src="../Images/TraitEx64.png">
+        <img src="../Images/TraitEx64.png" alt="An icon used for a plugin that allows the user to see the number of fish with any selected set of traits in the designated location.">
         <br />
         <p>
             When dropped on a location, the plugin will allow the user to choose some set of one or more traits and show the number of fish in that location with those traits. The user can add and remove traits to see various numbers for the move or location in question. The time in question can be set when dropped on a location, so it is possible to see how the numbers of the traits change through time. Since moves are a fixed point in time, dropping the icon on a move will only show a fixed time.
         </p>
         <br />
         <h3>Weight</h3>
-        <img src="../Images/Scale.bmp" style="height:64px;width:64px;" />
+        <img src="../Images/Scale.bmp" style="height:64px;width:64px;" alt="An icon used for a plugin that can be used to enter the weight of a group of fish in a specific location." />
         <br />
         <p>
             When dropped on a location containing fish, a form pops up for the user to enter the weight into. The plugin responds to the weight units set for the Hatchery Information System, and will show a ghost number of what the <a href="GrowthCoreModel.html">Growth Core</a> expects the weight to be, in those units. Therefore, if the user is about to enter a number that is radically different from what is shown, they’ll have some warning that they are either entering weight in the wrong units, or that something else might be wrong with the value.
@@ -290,7 +292,7 @@
         </p>
         <br />
         <h3 id="MWVRelease">Transport Release</h3>
-        <img src="../Images/IsoTruck.png">
+        <img src="../Images/IsoTruck.png" alt="An icon showing a cartoonish truck used for a plugin that allows entering a release involving transportation of various kinds from a rearing unit.">
         <br />
         <p>
             While the icon is a truck, this release plugin allows for release by truck, pack, airplane, helicopter, boat, mixed, and other. Fish can be released by pounds of fish or numbers of fish, and a series of other traits can be tracked, including a few temperature measures, location, date ranges, and some transportation statistics.
@@ -300,7 +302,7 @@
         </p>
         <br />
         <h3>Volitional Release</h3>
-        <img src="../Images/ReleaseIII.png">
+        <img src="../Images/ReleaseIII.png" alt="An icon showing fish emerging from a pipe, which is used for a plugin that allows the entering of data related to the volitional release from a rearing unit.">
         <br />
         <p>
             The volitional release plugin is a variant on the transport release plugin. They are pretty similar, except that volitional releases will always have a date range, will never have a transport method, and are also lacking most of the other transportation statistics.
@@ -309,7 +311,7 @@
 
         <h2>Existing Raceway Icon Plugins</h2>
         <h3 id="MWVEggInfoOne">Egg Info One</h3>
-        <img src="../Images/EggInfo32.png">
+        <img src="../Images/EggInfo32.png" alt="An icon used for a plugin that allows the user to see some information about numbers and certain traits for fish eggs.">
         <br />
         <p>
             A simple reporting plugin that shows the species, stock, brood year, and what’s called a virtual stock (also called a pseudo stock) with the marks found on the eggs. The form has at least that one tab, but may well include other tabs, with different tabs for different stocks.
@@ -319,14 +321,14 @@
         </p>
         <br />
         <h3>Genetic Information</h3>
-        <img src="../Images/FatRYGenetics.png" />
+        <img src="../Images/FatRYGenetics.png" alt="An icon depicting a cartoonish DNA strand, which is used for a plugin allowing the user to see genetic information about the fish in a rearing unit." />
         <br />
         <p>
             This plugin was an early plugin created to show the utility of the trait component of the <a href="FBOModel.html#MoveWeb">Move Web</a> by showing where a group of offspring ended up in the hatchery. What the plugin shows is the parental groups found in the current location along with the numbers of each group. There are also tabs for the male and female parents, if that information is available. Whether or not that information is available depends entirely on what genetic information is entered.
         </p>
         <br />
         <h3>Growth Graphics</h3>
-        <img src="../Images/GrowthCurve.png">
+        <img src="../Images/GrowthCurve.png" alt="An icon depicting a logarithmic graph, which is used for a plugin allowing the user to see the size of fish over time in a rearing unit.">
         <br />
         <p>
             This plugin is only available for locations that include fish, never for eggs. The plugin shows the growth of the fish over time in the location in question. Significant points along the curve are indicated by icons, such as measurements, estimated values, and changes in the intended growth due to changes in feed. The curve also projects the growth into the future, though not very far into the future.
@@ -336,7 +338,7 @@
         </p>
         <br />
         <h3 id="MWVMarkReportOne">Mark Report One</h3>
-        <img src="../Images/MarkSmallImage.bmp">
+        <img src="../Images/MarkSmallImage.bmp" alt="An icon used for a plugin that shows the numbers of each mark found on the fish in a rearing unit.">
         <br />
         <p>
             A simple reporting plugin that shows the species, stock, brood year, and what’s called a virtual stock (also called a pseudo stock) with the marks found on the fish. The form has at least that one tab, but may well include other tabs, with different tabs for different stocks. Each tab will show a breakdown of the marks on that stock, in the case of mixed stock rearing units.
@@ -346,7 +348,7 @@
         </p>
         <br />
         <h3>Numbers</h3>
-        <img src="../Images/Number32.png">
+        <img src="../Images/Number32.png" alt="An icon used for a plugin that shows the numbers over time for fish in a rearing unit. Note that this primarily shows the impact of mortality over time.">
         <br />
         <p>
             This plugin does something slightly different if dropped on a move or dropped on a rearing unit. The reason for this is that there is a date range for rearing units, but no date range for moves.
@@ -361,28 +363,28 @@
 
         <h2>Existing Menu Only Plugins</h2>
         <h3 id="MWVComMonitor">Communication Monitor</h3>
-        <img src="../Images/ComIconSmall.png">
+        <img src="../Images/ComIconSmall.png" alt="An icon used for a plugin that offers up some obscure information about the communication system used by the Hatchery Information System.">
         <br />
         <p>
             This plugin was largely created because I could. It shows the versatility of the plugin system, though it likely does little of interest to people. The plugin was mostly intended to help with diagnosing any communication issues with the <a href="CommunicationModel.html">Communication</a> model. The form that pops up shows things like how many instances of the Hatchery Information System are active, what the last message was, who is the godfather, and things like that. There is also the ability to take over the Godfather role for the current instance, though since the role is usually automatic, taking over the role is mostly just for testing.
         </p>
         <br />
         <h3>Communication Tester</h3>
-        <img src="../Images/ComCheck.png">
+        <img src="../Images/ComCheck.png" alt="An icon used for a plugin that helps to diagnose network issues in a LAN at a fish hatchery.">
         <br />
         <p>
             Similar to the <a href="#MWVComMonitor">Communication Monitor</a>, this plugin was created to help with diagnosing communication issues. The tests may not be all that useful, either, as they attempt to flood the system with lots of UDP messages and track how many get lost. The plugin might show a noisy system, but might also show nothing at all.
         </p>
         <br />
         <h3>Condition Factor View</h3>
-        <img src="../Images/CFIcon32.png">
+        <img src="../Images/CFIcon32.png" alt="An icon used for a plugin that allows the user to see some information on the condition factor of fish over time.">
         <br />
         <p>
             This plugin is part of the test harness group and is not intended for production, though the concept might have value beyond testing. The idea is to show what condition factor value is used for certain times. To make it more useful, it would be more reasonable to make this a side stall plugin, but condition factors, as shown in this plugin, are some internal data used by the <a href="GrowthCoreModel.html">Growth Core</a> model. I haven’t figured out what should be shown to a wider audience in a more useful fashion.
         </p>
         <br />
         <h3>SQL Display</h3>
-        <img src="../Images/TMUnselected.png">
+        <img src="../Images/TMUnselected.png" alt="An icon used for a plugin which is only intended for testing.">
         <br />
         <p>
             The SQL Display plugin is part of the test harness group, and is not intended for production. The plugin works with the <a href="#MWVSQLInterceptor">SQL Interceptor</a> plugin, as it shows results, whereas the SQL Interceptor only gathers data. This plugin is only useful for some very specific testing.

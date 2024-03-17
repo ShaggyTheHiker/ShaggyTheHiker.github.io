@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/General.css" />
+    <title>The rearing unit model, which manages the physical spaces for a fish hatchery in the Hatchery Information System.</title>
+    <meta name="description" content="Fish hatcheries consist of a number of rearing units of various shapes, sizes, and configurations. The rearing unit model organizes all of these rearing units, manages splitting of the rearing units, and tracks how sizes and volumes change over time in the Hatchery Information System." />
 </head>
 <body>
     <!-- This may not be necessary -->
@@ -90,7 +92,7 @@
             In the Hatchery Information System, the physical structures are called Rearing Unit Bases, or RUB. The spaces within the physical structures are called Rearing Units or RU. A single Rearing Unit Base will have one or more Rearing Units within it. The number or rearing units may stay fixed, if the base can’t be divided, or it can change over time as dividers are added and removed. While Hatchery Information System makes use of these formal names internally and in documentation, when talking about a hatchery design with a general audience, it is more common to use the term “rearing unit” to refer to either the physical structure or the spaces within the physical structure without making a distinction between the two. The context of the conversation is usually sufficient to tell the two apart.
         </p>
 
-        <img src="../Images/OneToTwoWithDivider.png">
+        <img src="../Images/OneToTwoWithDivider.png" alt="A representation of how a single rearing unit can be split in two with the addition of a divider.">
         <br />
         <br />
 
@@ -128,7 +130,7 @@
             The Rearing Unit Business Model starts with the Rearing Unit Manager (RUM) object. This object loads all rearing unit plugins and organizes the rearing units. From this object, there are two branches, one to all the Rearing Unit Base Holders (RUBH) and the other to the Zone Organizer.
         </p>
 
-        <img src="../Images/RUBOSections.png">
+        <img src="../Images/RUBOSections.png" alt="A schematic diagram of how the different parts of the rearing unit model relate to one another.">
         <br />
         <br />
 
@@ -152,7 +154,7 @@
             Zones are logical groups of physical rearing structures. Sometimes, the groups of rearing units that make up a hatchery are obvious, such as a bank of raceways. Other times, groups may be at the discretion of the hatchery. It all comes down to how the hatchery organizes their rearing units for management purposes. Three rows of raceways might be one zone or three different zones. Each zone will be displayed on the screen as a distinct unit separate from every other zone, the sole purpose of the Zone Organizer is to organize this display on the screen. Therefore, the organization done by the Zone Organizer should follow how the hatchery wants to logically group sets of rearing units. No other consideration is relevant.
         </p>
 
-        <img src="../Images/Zones Base Image.png">
+        <img src="../Images/Zones Base Image.png" alt="A detail image showing the layout of rearing units in the Hatchery Information System with annotations about the different items visible.">
         <br />
         <br />
 
@@ -170,8 +172,8 @@
             From the perspective of hatchery data management, keyways might be of little interest, except that they end up being powerfully useful in a couple different ways. In the Hatchery Information System, some rearing unit plugins will have rearing units that have keyways in fixed locations. An example of this would be a pond that can be divided in half, or into quarters.
         </p>
 
-        <img src="../Images/QuadPondWithSplitters.png">
-        <img src="../Images/AnnotatedSplitRUB.png" />
+        <img src="../Images/QuadPondWithSplitters.png" alt="A representation of a rectangular pond that can be divided into quarters. Annotations show where the pond can be divided.">
+        <img src="../Images/AnnotatedSplitRUB.png" alt="A representation of a rectangular raceway that has been divided first into two parts, then into three, with annotations showing how the different sections are named by default." />
         <br />
         <br />
 
@@ -179,7 +181,7 @@
             Other types of rearing units will allow the user to indicate where keyways are located in the physical structure. The most common example of such a rearing unit is the rectangular rearing unit that is suitable for most vats and raceways.
         </p>
 
-        <img src="../Images/KeywaysImage.png">
+        <img src="../Images/KeywaysImage.png" alt="A representation of a rectangular raceway showing keyways located in the raceway. The keyways are annotated.">
         <br />
         <br />
 
