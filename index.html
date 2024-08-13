@@ -82,23 +82,19 @@
         <h1>Overview</h1>
         <div>
             <p>
-                This site discusses a program for managing hatchery information, which was written as a hobby over several years by somebody who spent a few decades immersed in the subject. The primary focus is on research and conservation hatcheries, though the program is designed to be sufficiently flexible to work for those and any other hatchery or hatchery like data structure where animals live in a variety of rearing spaces.
+                Fish hatcheries produce large amounts of data annually. Different hatcheries have to track different data, but all hatcheries, and especially conservation and research hatcheries, will have to track large amounts of diverse data. This makes managing and storing the data both costly and time consuming. I am not aware of any organization that has been able to write a program for collecting hatchery data without several years of effort and <a href="Pages/Rationale.html">considerable cost</a>. Spending the time and money required to come up with a hatchery data management system is probably not justified unless the program can serve for several years, which is far more likely to be the case if the program can change as the needs of the hatchery programs change.
             </p>
         </div>
 
         <br />
-        <h2>The Current State</h2>
+        
         <div>
             <p>
-                While the program is working and met all of my objectives for design, I am deeply ambivalent about databases designed for managing hatchery data long term. Such projects are inevitably going to be large, and tend to be quite costly to create and maintain. While the benefits for managing, exposing, and maintaining data records are intuitively clear to most everybody, it is debatable whether or not the benefits justify the costs. I wrote this program as a hobby, and despite it being a lot of fun, along with meeting all of my objectives, I’m still not sure whether this, or any other hatchery data management program, is worth writing in earnest. However, if it is possible to write a program that can underpin a wide range of needs, then it is likely reasonable, and that is the core objective of this project.
-            </p>
-        </div>
-        <div>
-            <p>
-                While working on this hobby, I learned quite a few things that would be useful to any agency that is setting out to write a hatchery data management program. I have not made the program, or the source code, publicly available at this time, because I don’t want anybody to think this program is a totally finished product. In fact, since all the UI and much of the functionality comes from plugins, the program can never be truly finished, nor should it be. Somebody will always have other plugins that could meet new needs or take the program in different directions. With hatcheries, and hatchery data, one must be permanently flexible, and that’s what this program offers. The program, source code, and a few thousand pages of documentation (most of which is in desperate need of curation) are available by contacting me. What I’m looking for is any person or group who knows what they are getting into, yet still believes it is the right thing to do.
+                The Hatchery Information System is a program that uses principles of game design to create a program that is both easy to use and readily malleable. The program is based on a series of models <a href="Pages/Models.html#Models">models</a> for different aspects underlying fish hatchery operations. On top of that structure, all data collection and reporting is performed using plug-ins <a href="Pages/PluginOverview.html">models</a>, which means that adding and removing data collection can be performed with ease. While the models remain a fairly large program, all of the plug-ins are quite small, which means that, while maintaining the overall program still has a cost, changing the program is quite cheap.
             </p>
         </div>
         <br />
+
         <h2>Initial Principles</h2>
         <div>
             <p>

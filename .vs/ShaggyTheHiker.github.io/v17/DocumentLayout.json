@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\IColorControl.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\IColorControl.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\PluginOverview.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\PluginOverview.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\Models.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Models.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\FBOModel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\FBOModel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\RUBOModel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\RUBOModel.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\Rationale.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\Rationale.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\The Future Direction.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\The Future Direction.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +46,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IColorControl.html",
-              "DocumentMoniker": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\IColorControl.html",
-              "RelativeDocumentMoniker": "Pages\\IColorControl.html",
-              "ToolTip": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\IColorControl.html",
-              "RelativeToolTip": "Pages\\IColorControl.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKcAAAAHAAAA",
+              "DocumentIndex": 1,
+              "Title": "PluginOverview.html",
+              "DocumentMoniker": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\PluginOverview.html",
+              "RelativeDocumentMoniker": "Pages\\PluginOverview.html",
+              "ToolTip": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\PluginOverview.html",
+              "RelativeToolTip": "Pages\\PluginOverview.html",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-03-17T19:01:58.143Z",
+              "WhenOpened": "2024-08-13T20:23:27.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FBOModel.html",
+              "DocumentMoniker": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\FBOModel.html",
+              "RelativeDocumentMoniker": "Pages\\FBOModel.html",
+              "ToolTip": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\FBOModel.html",
+              "RelativeToolTip": "Pages\\FBOModel.html",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAF8AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-13T20:21:11.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RUBOModel.html",
+              "DocumentMoniker": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\RUBOModel.html",
+              "RelativeDocumentMoniker": "Pages\\RUBOModel.html",
+              "ToolTip": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\RUBOModel.html",
+              "RelativeToolTip": "Pages\\RUBOModel.html",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-13T20:20:47.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Models.html",
+              "DocumentMoniker": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\Models.html",
+              "RelativeDocumentMoniker": "Pages\\Models.html",
+              "ToolTip": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\Models.html",
+              "RelativeToolTip": "Pages\\Models.html",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAGYAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-13T20:19:25.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Rationale.html",
+              "DocumentMoniker": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\Rationale.html",
+              "RelativeDocumentMoniker": "Pages\\Rationale.html",
+              "ToolTip": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\Rationale.html",
+              "RelativeToolTip": "Pages\\Rationale.html",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-13T20:18:03.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAAAFcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-13T20:15:09.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "The Future Direction.html",
+              "DocumentMoniker": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\The Future Direction.html",
+              "RelativeDocumentMoniker": "Pages\\The Future Direction.html",
+              "ToolTip": "C:\\Users\\Shaggy\\source\\repos\\ShaggyTheHiker.github.io\\Pages\\The Future Direction.html",
+              "RelativeToolTip": "Pages\\The Future Direction.html",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAGsAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-17T19:06:25.329Z",
               "EditorCaption": ""
             }
           ]
