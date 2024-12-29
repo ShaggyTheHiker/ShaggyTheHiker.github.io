@@ -205,7 +205,7 @@
             The trait originated with the release, but has flowed back upstream so that a person can say that the fish in the vat will end up being released at that site. By flowing the traits back upstream, it makes it possible for the Move Web object to answer the question as to where the fish were released. Also, since the trait is only stored with the release move, there is no additional size to the database for storing this information.
         </p>
         <p>
-            By managing traits in this way, it is possible to ask what traits are, or will eventually be added, on any group of fish in either moves or assemblages, and get the estimated number of fish with any set of traits. The Move Web View in Hatchery Information System shows this in the tool tips, which can be changed to show whatever information is desired.
+            By managing traits in this way, it is possible to ask which traits are present, or will be present, on any set of fish, whether in moves or in rearing units, at any point while they are in the hatchery. Furthermore, an estimate of the number of fish with each trait, or combination of traits, can be obtained along with a rough estimate of the confidence in that number. The Move Web View in Hatchery Information System shows this in the tool tips, which can be changed to show whatever information is desired.
         </p>
 
         <img src="../Images/TooltipText1.png" alt="A graphical detail showing the information that can be shown for the fish in a rearing unit of a fish hatchery.">
@@ -221,7 +221,14 @@
 
         <h2 id="CMRorCMT">The Simplest Move Web</h2>
         <p>
-            Originally, I thought that the simplest move web would be a single move into a single location. Eventually, I realized that was not the simplest move web. All traits originate with moves. Assemblage Units have no data associated with them. In fact, in the Hatchery Information System database design, the Assemblage Unit table consists of a primary key, a rearing unit ID (to get a display name from), a creation move ID (the first move into the rearing unit), a termination move ID (the last move out that empties the assemblage, if there are no more fish in the assemblage), and some audit fields that are involved in managing the database itself. Furthermore, the creation move is a vestigial field of no particular value, and the termination move is only there because it is more efficient to have it indicate whether there are fish still in the assemblage or not. Neither of those fields are strictly necessary. Take those two out, and the table becomes a PK, a rearing unit ID, and some audit fields. There’s really nothing much to an Assemblage Unit as far as the database is concerned. Therefore, a move web need not have an Assemblage Unit to be complete. The simplest move web is just a single move with neither source nor destination.
+            Originally, I thought that the simplest move web would be a single move into a single location.
+        </p>
+        <img src="../Images/CreationMove.png" alt="A detail showing the movement of fish into a graphical representation of a rearing unit from an unknown source represented by a cloud.">
+        <br />
+        <br />
+
+        <p>
+            Eventually, I realized that was not the simplest move web. All traits originate with moves. Assemblage Units have no data associated with them. In fact, in the Hatchery Information System database design, the Assemblage Unit table consists of a primary key, a rearing unit ID (to get a display name from), a creation move ID (the first move into the rearing unit), a termination move ID (the last move out that empties the assemblage, if there are no more fish in the assemblage), and some audit fields that are involved in managing the database itself. Furthermore, the creation move is a vestigial field of no particular value, and the termination move is only there because it is more efficient to have it indicate whether there are fish still in the assemblage or not. Neither of those fields are strictly necessary. Take those two out, and the table becomes a PK, a rearing unit ID, and some audit fields. There’s really nothing much to an Assemblage Unit as far as the database is concerned. Therefore, a move web need not have an Assemblage Unit to be complete. The simplest move web is just a single move with neither source nor destination.
         </p>
         <p>
             So, what is a single move with neither source nor destination? It is a stocking record. Many organizations will have stocking records from before they were tracking data about the rearing cycle in the hatchery. All stocking records are move webs, and can be managed in the Hatchery Information System design. They look like this
@@ -232,7 +239,7 @@
         <br />
 
         <p>
-            In this move web, it isn’t known where the fish came from, but it is known where they were released, and all the rest of the information about the fish from the stocking record become traits tied to the move. In this way, a design like that used by the Hatchery Information System can consolidate all manner of partial hatchery information from history.
+            In this move web, it isn’t known where the fish came from, but it is known where they were released, and all the rest of the information about the fish from the stocking record become traits tied to the move. In this way, a design like that used by the Hatchery Information System can consolidate all manner of existing hatchery information from existing databases, though there would likely be a fair amount of transformation needed.
         </p>
         <br />
 
