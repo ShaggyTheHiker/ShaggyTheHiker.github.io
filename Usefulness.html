@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/General.css" />
+    <title>The core models underlying the Hatchery Information System, a bite sized program for fish hatchery data management.</title>
+    <meta name="description" content="Fish hatchery data management tends to result in expensive, complex, programs that often do a poor job of handling change. The Hatcyhery Information System approach was intended as a versatile, extensible approach based on game design. While still fairly large, the design can be sized to fit the needs of different fish hatchery programs, and operations similar in nature to fish hatcheries." />
+</head>
+<body>
+    <!-- This may not be necessary -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Hatchery Information System</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Models
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Models.html">Model Overview</a>
+                        <a class="nav-link" href="RUBOModel.html">Rearing Unit Business Object</a>
+                        <a class="nav-link" href="FBOModel.html">Fish Business Object</a>
+                        <a class="nav-link" href="Models.html">Growth Core</a>
+                        <a class="nav-link" href="Models.html">Semi DAL</a>
+                        <a class="nav-link" href="CommunicationModel.html">Communication</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Philosophy
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="Rationale.html">Rationale</a>
+                        <a class="nav-link" href="The Future Direction.html">Future Direction</a>
+                        <a class="nav-link" href="NumberFlow.html">Managing Numbers</a>
+                        <a class="nav-link" href="Usefulness.html">Make Data Useful</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary dropdown-toggle btnCust" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plugins
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="nav-link" href="PluginOverview.html">Plugin Overview</a>
+                        <a class="nav-link" href="IHISGeneral.html">IHISGeneral</a>
+                        <a class="nav-link" href="IMWVSupplemental.html">IMWVSupplemental</a>
+                        <a class="nav-link" href="IShapeFactory.html">IShapeFactory</a>
+                        <a class="nav-link" href="IMetric.html">IMetric</a>
+                        <a class="nav-link" href="IColorControl.html">IColorControl</a>
+                        <a class="nav-link" href="IAPI.html">IInternalAPI</a>
+                        <a class="nav-link" href="ISilentPartner.html">ISilentPartner</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutPage.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br />
+    <div class="container-fluid mainText">
+        <h1>Improving Data Quality</h1>
+        <p>
+            While I have my doubts about hatchery databases, it is certainly the case that any database is worthless if the data in the database is unreliable. Ensuring the quality of any data entered into a database generally requires some kind of quality assurance process, but there are principles that can be followed to make the data more reliable.
+        </p>
+
+        <br />
+
+        <p>
+            The quality of the data in any database can be predicted down to the individual field level if the cost and benefit perceived by the person entering the data is understood. Several people have suggested that if one makes a program easy enough to use, people will just use it. That is not the case. Nobody does anything solely because it is easy. We do things because we perceive the benefit to outweigh the perceived cost. We might be incorrect in our perception of the cost, the benefit, or both, but we only do things when we believe the benefits outweigh the cost. This is a lesson that we have learned over and over when it comes to data entry, and are often still surprised by it.
+        </p>
+
+        <br />
+
+        <p>
+            In this case, the cost is only the time and effort required to correctly enter the data. The benefits can be better fish health, a paycheck, or simply avoiding getting yelled at by a supervisor. So long as the benefits outweigh the cost, the data will get entered. So long as the benefits of the data being right outweigh the cost of checking the data and correcting any errors, the data will be correct. Be clear, though, that this benefit must be to the person paying the cost, not to the organization they work for. Misunderstanding that point has led to a whole lot of missing or bad data in databases over the years.
+        </p>
+
+        <br />
+
+        <h1>Three Categories of Data Entry</h1>
+
+        <br />
+
+        <p>
+            When it comes to data entry motivation, there are roughly three categories. In the first category, people are entering data because they directly benefit from doing so. The benefit is not a paycheck, either. The benefit has to be that something else in their life is made easier by having the data available to them. Data in this category is reliably of the highest quality, since the person entering the data benefits directly from having the data available and correct. If mistakes are made, they will be caught and corrected promptly.
+        </p>
+
+        <br />
+
+        <p>
+            In the second category, people are entering the data not because they directly benefit from the data, but because they believe that doing so will benefit either a cause or a person who they care about. They are motivated to get the data entered and do so correctly, but since they don’t benefit directly, mistakes will likely not be caught and corrected promptly unless some kind of review process is implemented. One example of this is data collected by volunteers. They care enough to devote their time to collecting the data, but they don’t directly benefit from that data.
+        </p>
+
+        <br />
+
+        <p>
+            The final category is perhaps the most common. In this category, people are entering the data because they are required to for some reason. Entering the data is part of their job, but they do not directly benefit from doing the work. Data in this category will be absent or incorrect, to some extent, unless it is somehow mandatory and is also reviewed by somebody. In my experience, the most conscientious data entry personnel will make numerous errors that will go uncaught if the data is not reviewed in some fashion. Furthermore, the less benefit the data entry person perceives, the worse the quality of the data entered.
+        </p>
+
+        <br />
+
+        <p>
+            Obviously, the goal of any data entry program is to have something that falls into the first category. With regards to hatchery data management, what this means is that close attention must be paid to what would benefit the hatchery personnel in the rest of their work. The needs of management and biologists are important, but meeting any needs of the hatchery personnel will make the tasks of others far easier, since the data will be of higher quality to begin with.
+        </p>
+
+        <br />
+
+        <h1>Mortality</h1>
+
+        <br />
+
+        <p>
+            One example of this would be daily mortality. Dying is one of the few ways that the fish in a hatchery have of signaling that something is going wrong. An increase in mortality could indicate the onset of a disease, a bad batch of feed, or some other kind of stress impacting the population. For this reason, hatchery staff collect daily mortality counts whenever practicable. Unfortunately for the purpose of data management, the hatchery staff gain most of the benefit from the daily mortality count as soon as they have counted it. Recording the information has some added benefit, since it allows the visualization of change over time, but once the fish have been moved out of the rearing unit, the benefit of retaining the mortality information wanes rapidly as far as hatchery personnel are concerned.
+        </p>
+
+        <br />
+
+        <p>
+            What value could retaining daily mortality have? We don’t usually know because we rarely retain the information for any length of time. As hatchery practices continue to evolve, keeping track of daily mortality is becoming increasingly valuable because it has the potential to allow comparing different practices over years. Whether there is any specific value to one mortality count is not always clear, but if the data is discarded, then any possible value is discarded along with the data. Also, the cost associated with collecting the data has already been paid, so discarding the data saves nothing. Therefore, entering the data into a format where it can be retained does have potential benefit which can be obtained at no additional cost.
+        </p>
+
+        <br />
+
+        <p>
+            The cost of entering the daily mortality remains the same whether the data is entered into an Excel spreadsheet or entered into some hatchery database, so long as entering the data into the hatchery database is the same effort as entering data into a spreadsheet. Therefore, so long as care is taken to make the data entry of mortality no more difficult than current hatchery practice, then if any additional benefit can be offered to the hatchery personnel, they will preferentially use the database. That benefit need not be great, either, which is good, because there may be little on offer.
+        </p>
+
+        <br />
+
+        <h1>Feed Projections</h1>
+
+        <br />
+
+        <p>
+            This leads to the fundamental value of feed projections when creating a hatchery database. In hatchery practice, feed projections use a formula to calculate how much to feed the fish to achieve a certain amount of growth over a certain time interval, usually about a month. It has been suggested that this formulaic approach is not very scientific, and that is a fair criticism. However, without data there is no science, there is only guessing. To do a better job than the formulaic feed projection, it is necessary to track a variety of parameters about the hatchery that are foundational for both hatchery personnel as well as management. In feed projections, the data that management wants and the benefits that hatchery personnel need, align perfectly. Therefore, feed projections are the keys to the kingdom that unlock both better hatchery practices as well as providing clear benefit for hatchery personnel using a hatchery database.
+        </p>
+
+        <br />
+
+        <p>
+            To generate a feed projection, it is necessary to know the number of fish over time (moves and mortality), know the growth of the fish over time (weight or length), know the amount fed over time (any of the many potential parameters of fish food), and know something about the rearing units themselves (at least volume, but also usually flow and therefore turnover, along with other things like temperature and perhaps even water chemistry). On the face of it, this means that feed projections can require tracking all pertinent hatchery parameters, making up the basis for studying feed strategies, fish health metrics, nutritional impacts, water chemistry impacts, space utilization, and nearly anything else relevant to hatcheries. Better yet, not only would biologists and management benefit from having this data, I have never met any hatchery manager or assistant manager who wasn’t keenly interested in improving the quality of the fish they raise. Feed projections may not be very scientific, but the data that goes into them can form the foundation of a hatchery database that is useful to both hatchery personnel as well as management.
+        </p>
+
+        <br />
+
+        <h1>Summary</h1>
+
+        <br />
+
+        <p>
+            If the goal of a hatchery database is to obtain good quality data regarding the rearing of fish in the hatchery, then the objective must be to focus on getting the data in a way that directly benefits the hatchery personnel. The most salient benefit is probably that which has some chance of improving fish health and fish rearing practices. The examples given, that of daily mortality and feed projections, are two of the most prominent examples of data that both hatchery personnel as well as management and biologists, could benefit from. The essential point to both is recognizing the benefits that hatchery personnel would derive from recording the data. If attention is then paid to making the data entry no worse than whatever hatchery practices are already in place, then the data entry program will benefit all parties and will be used preferentially over any alternative.
+        </p>
+
+        <br />
+
+        <p>
+            There are likely other examples of data that provides benefits to hatcheries. Considering the variety of different hatchery operations, it is quite likely that there are options that benefit some hatcheries and not others, but that is the point behind a modular system of data management. The goal is to provide benefits to hatchery personnel at the lowest personal cost. The benefits won’t be the same for all facilities, but good data depends on identifying and providing those benefits.
+        </p>
+    </div>
+
+</body>
+</html>
