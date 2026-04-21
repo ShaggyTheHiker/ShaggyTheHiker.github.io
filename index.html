@@ -9,6 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/General.css" />
+
+    <title>A Versatile Fish Hatchery Data Management Program</title>
+    <meta name="description" content="Fish hatchery data management tends to result in expensive, complex, programs that often do a poor job of handling change. The Hatcyhery Information System approach was intended as a versatile, extensible approach based on game design. While still fairly large, the design can be sized to fit the needs of different fish hatchery programs, and operations similar in nature to fish hatcheries."/>
 </head>
 <body>
     <!-- This may not be necessary -->
@@ -54,6 +57,7 @@
                         <a class="nav-link" href="Pages/Rationale.html">Rationale</a>
                         <a class="nav-link" href="Pages/The Future Direction.html">Future Direction</a>
                         <a class="nav-link" href="Pages/NumberFlow.html">Managing Numbers</a>
+                        <a class="nav-link" href="Usefulness.html">Make Data Useful</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -79,35 +83,26 @@
     </nav>
     <br />
     <div class="container-fluid mainText">
-        <h1>Preamble</h1>
-        <div>
-            <p>
-                  The Hatchery Information System is a hobby project I created to try to solve some of the issues I have seen with fish management agencies attempts to write fish hatchery data management systems. Those systems often turn out to be cumbersome and unloved because the problem is a particularly difficult one. The Hatchery Information System uses a graphical system that allows functionality to be extended using third party plugins. This makes for an easier interface to work with and greater flexibility to handle different requirements, while also removing the bottleneck that exists with most systems where only one team can add any functionality to the program. This approach results in a program that can be adjusted to meet a wide variety to needs, thereby extending the applicability of the program. 
-            </p>
-
-            <p>
-                When a programming problem is such that all solutions are large, then making a program that is suitable for the widest possible group of people makes more sense than making a narrowly focused program. The intention behind the Hatchery Information System design was to make a universal fish hatchery data management program suitable for all types of uses. I believe that the game-style approach taken by the Hatchery Information System is the best possible design, though I remain deeply ambivalent as to whether this is a problem that should be solved at all.
-            </p>
-        </div>
-        
-        <br />
-        
         <h1>Overview</h1>
         <div>
             <p>
-                Fish hatcheries produce large amounts of data annually. Different hatcheries have to track different data, but all hatcheries, and especially conservation and research hatcheries, will have to track large amounts of diverse data. This makes managing and storing the data both costly and time consuming. I am not aware of any organization that has been able to write a program for collecting hatchery data without several years of effort and <a href="Pages/Rationale.html#TheCost">considerable cost</a>. Spending the time and money required to come up with a hatchery data management system is probably not justified unless the program can serve for several years, which is far more likely to be the case if the program can change as the needs of the hatchery programs change.
+                This site discusses a program for managing hatchery information, which was written as a hobby over several years by somebody who spent a few decades immersed in the subject. The primary focus is on research and conservation hatcheries, though the program is designed to be sufficiently flexible to work for those and any other hatchery or hatchery like data structure where animals live in a variety of rearing spaces.
             </p>
         </div>
 
         <br />
-        
+        <h2>The Current State</h2>
         <div>
             <p>
-                The Hatchery Information System is a program that uses principles of game design to create a program that is both easy to use and readily malleable. The program is based on a series of <a href="Pages/Models.html#Models">models</a> for different aspects underlying fish hatchery operations. On top of that structure, all data collection and reporting is performed using <a href="Pages/PluginOverview.html">plug-ins</a>, which means that adding and removing data collection can be performed with ease. While the models remain a fairly large program, all of the plug-ins are quite small, which means that, while maintaining the overall program still has a cost, changing the program is quite cheap.
+                While the program is working and met all of my objectives for design, I am deeply ambivalent about databases designed for managing hatchery data long term. Such projects are inevitably going to be large, and tend to be quite costly to create and maintain. While the benefits for managing, exposing, and maintaining data records are intuitively clear to most everybody, it is debatable whether or not the benefits justify the costs. I wrote this program as a hobby, and despite it being a lot of fun, along with meeting all of my objectives, I’m still not sure whether this, or any other hatchery data management program, is worth writing in earnest. However, if it is possible to write a program that can underpin a wide range of needs, then it is likely reasonable, and that is the core objective of this project.
+            </p>
+        </div>
+        <div>
+            <p>
+                While working on this hobby, I learned quite a few things that would be useful to any agency that is setting out to write a hatchery data management program. I have not made the program, or the source code, publicly available at this time, because I don’t want anybody to think this program is a totally finished product. In fact, since all the UI and much of the functionality comes from plugins, the program can never be truly finished, nor should it be. Somebody will always have other plugins that could meet new needs or take the program in different directions. With hatcheries, and hatchery data, one must be permanently flexible, and that’s what this program offers. The program, source code, and a few thousand pages of documentation (most of which is in desperate need of curation) are available by contacting me. What I’m looking for is any person or group who knows what they are getting into, yet still believes it is the right thing to do.
             </p>
         </div>
         <br />
-
         <h2>Initial Principles</h2>
         <div>
             <p>
@@ -124,7 +119,7 @@
             <h3>
                 To facilitate graphical selection and interaction, the Current Time View data entry interface looks like this:
             </h3>
-            <img src="Images/AnnotatedMain.png">
+            <img src="Images/AnnotatedMain.png" alt="A graphical sylized image of a fish hatchery surrounded by icons that can be used to interact with the hatchery graphics. Annotations highlight different parts of the image.">
             <br />
             <br />
             <p>
@@ -148,7 +143,7 @@
             <h3>
                 A closeup of some raceways shows more functionality:
             </h3>
-            <img src="Images/TwoRacewayOneSplit.png" />
+            <img src="Images/TwoRacewayOneSplit.png" alt="A graphical representation of a fish hatchery raceway that has been divided into two parts using a screen." />
             <br />
             <br />
             <p>
@@ -179,7 +174,7 @@
             </p>
             <h3>The move web view shows all the Move Webs for the hatchery in the database.</h3>
 
-            <img src="Images/MWVFullScreen.png" />
+            <img src="Images/MWVFullScreen.png" alt="A graphical display of the flow of fish through the rearing units of a fish hatchery. Annotations highlight different parts of the display, and what can be done with them." />
             <br />
             <br />
 
@@ -196,7 +191,7 @@
                 Additionally, there are more interactions possible with a rearing unit.
             </p>
 
-            <img src="Images/SingleAU.png" />
+            <img src="Images/SingleAU.png" alt="A detail image showing a closeup of a graphical representation of a single rearing unit." />
             <br />
             <br />
 
@@ -204,7 +199,7 @@
                 There are RWPB icons for each rearing unit, just as there are in the Current Time View, but since there was insufficient space to draw the individual icons in the rearing unit the individual icons are accessed by hovering the mouse over the solitary icon in the upper left corner of the rearing unit. This brings up a floating image of the eight RWPB icons. The Current Time View works the same when the view is zoomed out too far to leave space for the RWPB icons.
             </p>
 
-            <img src="Images/RWPBFloating.png" />
+            <img src="Images/RWPBFloating.png" alt="A detail image showing a series of icons that are presented when the user hovers the mouse over an icon in a rearing unit." />
             <br />
             <br />
 
@@ -215,8 +210,8 @@
                 A few other things that can be seen for a rearing unit in Move Web View is that a rearing unit that still has fish will have an open end, while one that has been emptied will have a closed end.
             </p>
 
-            <img src="Images/SingleAU.png" />
-            <img src="Images/SingleAUOpen.png" />
+            <img src="Images/SingleAU.png" alt="A detail image showing a closeup of a graphical representation of the time fish spent in a single rearing unit." />
+            <img src="Images/SingleAUOpen.png" alt="A detail image showing a closeup of a graphical representation of the time fish spent in a single rearing unit when the fish are still found in that rearing unit." />
             <br />
             <br />
 
@@ -227,7 +222,7 @@
                 Since the scale of time on the horizontal axis is not linear, the spatial distance between two moves in or out is not meaningful. However, the relative position of two moves is meaningful.
             </p>
 
-            <img src="Images/MultipleMovesIn.png" />
+            <img src="Images/MultipleMovesIn.png" alt="A detail image showing multiple moves into a single rearing unit spread out over time." />
             <br />
             <br />
 
@@ -235,7 +230,7 @@
                 If a certain move happened after some other move, then the arrow for the move will be found to the right of the move it is after. This allows the user to visualize the sequence of how fish were added or removed from a rearing unit. Also note that some moves will have been recorded as having happened all at the same time. The date of any move can be seen in the tooltip for the move when the mouse hovers over the move.
             </p>
 
-            <img src="Images/MultipleSimultaneousMovesIn.png" />
+            <img src="Images/MultipleSimultaneousMovesIn.png" alt="A detail image showing multiple moves into a single rearing unit at the same time." />
             <br />
             <br />
 
